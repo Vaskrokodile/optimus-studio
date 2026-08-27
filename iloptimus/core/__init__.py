@@ -21,6 +21,15 @@ from .dataset_mode import (
     get_dataset_session,
     load_dataset_rows,
 )
+from .rl_mode import (
+    RLModeSpec,
+    RLModeResult,
+    enter_rl_mode,
+    build_failure_driven_rl_spec,
+    list_rl_sessions,
+    get_rl_session,
+    rl_mode_prompt,
+)
 
 __all__ = [
     "detect_hardware", "HardwareInfo",
@@ -31,4 +40,7 @@ __all__ = [
     "DatasetModeSpec", "DatasetModeResult", "enter_dataset_mode",
     "build_failure_driven_spec", "build_curriculum_spec",
     "list_dataset_sessions", "get_dataset_session", "load_dataset_rows",
+    "RLModeSpec", "RLModeResult", "enter_rl_mode",
+    "build_failure_driven_rl_spec",
+    "list_rl_sessions", "get_rl_session", "rl_mode_prompt",
 ]

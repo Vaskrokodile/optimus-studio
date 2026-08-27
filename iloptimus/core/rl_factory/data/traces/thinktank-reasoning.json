@@ -1,0 +1,2807 @@
+[
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All dogs are animals. Buddy is a dog. What can we conclude about Buddy?",
+    "response": "Buddy is an animal.",
+    "reasoning": "If all dogs are animals (premise 1), and Buddy is a dog (premise 2)...",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "reasoning",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 2,
+      "chain_id": "538b347c-dc85-42db-a47c-d2698943c69f"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All dogs are animals. Buddy is a dog. What can we conclude about Buddy?",
+    "response": "Buddy is an animal.",
+    "reasoning": "Then Buddy must be an animal.",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 2,
+      "chain_id": "538b347c-dc85-42db-a47c-d2698943c69f"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All dogs are animals. Buddy is a dog. What can we conclude about Buddy?",
+    "response": "Buddy is an animal.",
+    "reasoning": "Double-checking: Buddy is a dog, dogs are animals, so Buddy is an animal. Yes, that's correct.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "verification",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 2,
+      "chain_id": "538b347c-dc85-42db-a47c-d2698943c69f"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "If a book costs $24 and is on sale for 1/3 off, what is the sale price?",
+    "response": "$16",
+    "reasoning": "The book is $24 with 1/3 off. I need to find the sale price.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "d3a5c6e4-a2ef-41b8-94ce-9609b7309cc0"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "If a book costs $24 and is on sale for 1/3 off, what is the sale price?",
+    "response": "$16",
+    "reasoning": "First, let me understand what 1/3 off means. It means the discount is 1/3 of the original price.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "d3a5c6e4-a2ef-41b8-94ce-9609b7309cc0"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "If a book costs $24 and is on sale for 1/3 off, what is the sale price?",
+    "response": "$16",
+    "reasoning": "Discount = $24 × (1/3) = $8",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "calculation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "d3a5c6e4-a2ef-41b8-94ce-9609b7309cc0"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "If a book costs $24 and is on sale for 1/3 off, what is the sale price?",
+    "response": "$16",
+    "reasoning": "Sale price = $24 - $8 = $16",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "calculation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "d3a5c6e4-a2ef-41b8-94ce-9609b7309cc0"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "If a book costs $24 and is on sale for 1/3 off, what is the sale price?",
+    "response": "$16",
+    "reasoning": "Checking: $16 is 2/3 of $24. Let me verify: $24 × (2/3) = $16. Yes!",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "verification",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "d3a5c6e4-a2ef-41b8-94ce-9609b7309cc0"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "If a book costs $24 and is on sale for 1/3 off, what is the sale price?",
+    "response": "$16",
+    "reasoning": "The sale price is $16.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "d3a5c6e4-a2ef-41b8-94ce-9609b7309cc0"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Find the next term: 1, 1, 2, 3, 5, 8, ?",
+    "response": "13",
+    "reasoning": "Let me look for a pattern in this sequence.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 3,
+      "chain_id": "9cbe2016-4538-473c-aa49-dc07ddf3b14c"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Find the next term: 1, 1, 2, 3, 5, 8, ?",
+    "response": "13",
+    "reasoning": "Let me try another approach. What if each term is the sum of the previous two?",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "thinking",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 3,
+      "chain_id": "9cbe2016-4538-473c-aa49-dc07ddf3b14c"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Find the next term: 1, 1, 2, 3, 5, 8, ?",
+    "response": "13",
+    "reasoning": "1+1=2 ✓, 1+2=3 ✓, 2+3=5 ✓, 3+5=8 ✓",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "verification",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 3,
+      "chain_id": "9cbe2016-4538-473c-aa49-dc07ddf3b14c"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Find the next term: 1, 1, 2, 3, 5, 8, ?",
+    "response": "13",
+    "reasoning": "Next term: 5 + 8 = 13",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "calculation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 3,
+      "chain_id": "9cbe2016-4538-473c-aa49-dc07ddf3b14c"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Ancient Egypt developed along the Nile River, while Mesopotamia developed between the Tigris and Euphrates. What common factor explains why both civilizations arose near rivers?",
+    "response": "Rivers enabled agriculture through irrigation and fertile soil deposits, providing stable food supplies necessary for large, settled populations.",
+    "reasoning": "Rivers provide water for drinking and daily use.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "analysis",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 2,
+      "chain_id": "6b1d8982-ae07-4b68-a807-4339aaf153cb"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Ancient Egypt developed along the Nile River, while Mesopotamia developed between the Tigris and Euphrates. What common factor explains why both civilizations arose near rivers?",
+    "response": "Rivers enabled agriculture through irrigation and fertile soil deposits, providing stable food supplies necessary for large, settled populations.",
+    "reasoning": "Rivers provide water for irrigation and farming.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "analysis",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 2,
+      "chain_id": "6b1d8982-ae07-4b68-a807-4339aaf153cb"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Ancient Egypt developed along the Nile River, while Mesopotamia developed between the Tigris and Euphrates. What common factor explains why both civilizations arose near rivers?",
+    "response": "Rivers enabled agriculture through irrigation and fertile soil deposits, providing stable food supplies necessary for large, settled populations.",
+    "reasoning": "The most crucial factor is agriculture - rivers enable reliable food production through irrigation and fertile floodplains.",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "reasoning",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 2,
+      "chain_id": "6b1d8982-ae07-4b68-a807-4339aaf153cb"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Ancient Egypt developed along the Nile River, while Mesopotamia developed between the Tigris and Euphrates. What common factor explains why both civilizations arose near rivers?",
+    "response": "Rivers enabled agriculture through irrigation and fertile soil deposits, providing stable food supplies necessary for large, settled populations.",
+    "reasoning": "Both Egypt (Nile floods) and Mesopotamia (irrigation systems) relied on rivers for agriculture.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "verification",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 2,
+      "chain_id": "6b1d8982-ae07-4b68-a807-4339aaf153cb"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Ancient Egypt developed along the Nile River, while Mesopotamia developed between the Tigris and Euphrates. What common factor explains why both civilizations arose near rivers?",
+    "response": "Rivers enabled agriculture through irrigation and fertile soil deposits, providing stable food supplies necessary for large, settled populations.",
+    "reasoning": "Rivers enabled agriculture through irrigation and fertile soil, allowing stable food supplies that support large populations and complex societies.",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 2,
+      "chain_id": "6b1d8982-ae07-4b68-a807-4339aaf153cb"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What comes next: 1, 11, 21, 1211, 111221, ?",
+    "response": "312211 (This is the \"look and say\" sequence where each term describes the previous term)",
+    "reasoning": "Looking at 1 → 11: Could 11 describe 'one 1'?",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 80.0,
+      "flag_count": 4,
+      "total_judgments": 5,
+      "chain_id": "5369f323-6a40-4562-8b30-1389d6a953e5"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What comes next: 1, 11, 21, 1211, 111221, ?",
+    "response": "312211 (This is the \"look and say\" sequence where each term describes the previous term)",
+    "reasoning": "11 → 21: That's 'two 1s' = 21. Yes!",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 80.0,
+      "flag_count": 4,
+      "total_judgments": 5,
+      "chain_id": "5369f323-6a40-4562-8b30-1389d6a953e5"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What comes next: 1, 11, 21, 1211, 111221, ?",
+    "response": "312211 (This is the \"look and say\" sequence where each term describes the previous term)",
+    "reasoning": "Let me re-read 111221: 111-22-1. That's three 1s, two 2s, one 1. So 312211.",
+    "metadata": {
+      "step_index": 7,
+      "step_type": "verification",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 5,
+      "chain_id": "5369f323-6a40-4562-8b30-1389d6a953e5"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A store has a 25% off sale. If a jacket originally costs $80, what is the sale price?",
+    "response": "$60",
+    "reasoning": "So the question is asking: what is $80 minus 25% of $80?",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "468ebe75-442b-4815-9539-6d72fd6c8560"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A store has a 25% off sale. If a jacket originally costs $80, what is the sale price?",
+    "response": "$60",
+    "reasoning": "Alternatively, I could calculate 75% of $80 directly: 0.75 × 80 = $60. Same answer!",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "verification",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "468ebe75-442b-4815-9539-6d72fd6c8560"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A store has a 25% off sale. If a jacket originally costs $80, what is the sale price?",
+    "response": "$60",
+    "reasoning": "The sale price is $60.",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 2,
+      "chain_id": "468ebe75-442b-4815-9539-6d72fd6c8560"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A population doubles every 10 years. If it starts at 1000, what will it be in 30 years?",
+    "response": "8000",
+    "reasoning": "After 20 years: 2000 × 2 = 4000",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "calculation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 6,
+      "chain_id": "65d4b26d-8990-48d2-ac3f-48b31ec70cba"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A population doubles every 10 years. If it starts at 1000, what will it be in 30 years?",
+    "response": "8000",
+    "reasoning": "After 30 years: 4000 × 2 = 8000",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "calculation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 6,
+      "chain_id": "65d4b26d-8990-48d2-ac3f-48b31ec70cba"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A population doubles every 10 years. If it starts at 1000, what will it be in 30 years?",
+    "response": "8000",
+    "reasoning": "The population will be 8000.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 6,
+      "chain_id": "65d4b26d-8990-48d2-ac3f-48b31ec70cba"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "I have hands but cannot clap. I have a face but cannot smile. What am I?",
+    "response": "A clock",
+    "reasoning": "This is a riddle. I need to find something with hands and a face but isn't alive.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 6,
+      "total_judgments": 8,
+      "chain_id": "e341540c-3986-46c7-a44d-a42bf230645a"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What is 15% of 80?",
+    "response": "12",
+    "reasoning": "I need to calculate 15% of 80. To do this, I'll convert the percentage to a decimal.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "78c53048-2c48-4c82-9c92-3c0a41097f54"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What is 15% of 80?",
+    "response": "12",
+    "reasoning": "15% = 15/100 = 0.15",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "calculation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "78c53048-2c48-4c82-9c92-3c0a41097f54"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What is 15% of 80?",
+    "response": "12",
+    "reasoning": "Let me double-check: 15 divided by 100 is indeed 0.15. Yes, that's correct.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "verification",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 4,
+      "total_judgments": 4,
+      "chain_id": "78c53048-2c48-4c82-9c92-3c0a41097f54"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What is 15% of 80?",
+    "response": "12",
+    "reasoning": "0.15 × 80 = 12",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "calculation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "78c53048-2c48-4c82-9c92-3c0a41097f54"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What is 15% of 80?",
+    "response": "12",
+    "reasoning": "The answer is 12.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "78c53048-2c48-4c82-9c92-3c0a41097f54"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "In a room, there are 3 people: Amy, Bob, and Carol. One always tells the truth, one always lies, and one alternates. Amy says \"Bob is the liar.\" Bob says \"I am not the liar.\" Who is the truth-teller?",
+    "response": "Amy is the truth-teller",
+    "reasoning": "Amy is the truth-teller.",
+    "metadata": {
+      "step_index": 7,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "1e82ee66-00c7-4120-8d72-cfc427984521"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "How many continents are there on Earth?",
+    "response": "7",
+    "reasoning": "Let me count: 1-Africa, 2-Antarctica, 3-Asia, 4-Australia, 5-Europe, 6-North America, 7-South America. Yes, seven.",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "verification",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 5,
+      "total_judgments": 5,
+      "chain_id": "68665bf7-7b85-41db-bc4e-0098dfcb0819"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "If you put ice cream in a hot oven, what happens to it?",
+    "response": "It melts",
+    "reasoning": "This is a question about ice cream and ovens. Let me think about what I know about both.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "4b0110c4-e63b-4471-936f-b481078bfd88"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "If you put ice cream in a hot oven, what happens to it?",
+    "response": "It melts",
+    "reasoning": "Ice cream is a frozen dairy dessert, typically kept at temperatures below 0°C (32°F). Ovens, when hot, operate at temperatures typically between 150°C to 250°C (300°F to 480°F).",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "background",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "4b0110c4-e63b-4471-936f-b481078bfd88"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "If you put ice cream in a hot oven, what happens to it?",
+    "response": "It melts",
+    "reasoning": "So we have something frozen going into something very hot. What happens when frozen things meet high heat?",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "thinking",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "4b0110c4-e63b-4471-936f-b481078bfd88"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "If you put ice cream in a hot oven, what happens to it?",
+    "response": "It melts",
+    "reasoning": "The ice cream will melt because the heat from the oven far exceeds the freezing point of ice cream.",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "reasoning",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "4b0110c4-e63b-4471-936f-b481078bfd88"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "If you put ice cream in a hot oven, what happens to it?",
+    "response": "It melts",
+    "reasoning": "Actually, it would not just melt - at oven temperatures, it would likely evaporate the water content and potentially burn the sugars and fats.",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "elaboration",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "4b0110c4-e63b-4471-936f-b481078bfd88"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "If you put ice cream in a hot oven, what happens to it?",
+    "response": "It melts",
+    "reasoning": "The ice cream will melt, and if left long enough, will evaporate and burn.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "4b0110c4-e63b-4471-936f-b481078bfd88"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why does ice float on water instead of sinking?",
+    "response": "Ice is less dense than water",
+    "reasoning": "This is a fascinating physics question. Most substances are denser as solids than as liquids, but water is special.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "fe612b35-9c67-4ab8-ba4a-e09cd7fe37f4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why does ice float on water instead of sinking?",
+    "response": "Ice is less dense than water",
+    "reasoning": "Density is mass per unit volume. Objects float when they are less dense than the liquid they are in.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "background",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "fe612b35-9c67-4ab8-ba4a-e09cd7fe37f4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why does ice float on water instead of sinking?",
+    "response": "Ice is less dense than water",
+    "reasoning": "Water molecules form a crystalline structure when they freeze. This structure has more space between molecules than liquid water.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "explanation",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "fe612b35-9c67-4ab8-ba4a-e09cd7fe37f4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why does ice float on water instead of sinking?",
+    "response": "Ice is less dense than water",
+    "reasoning": "I should probably explain hydrogen bonding here... actually, that might be too detailed for this question.",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "fe612b35-9c67-4ab8-ba4a-e09cd7fe37f4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why does ice float on water instead of sinking?",
+    "response": "Ice is less dense than water",
+    "reasoning": "Ice has a density of about 0.92 g/cm³, while liquid water has a density of 1.0 g/cm³.",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "fact",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "fe612b35-9c67-4ab8-ba4a-e09cd7fe37f4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why does ice float on water instead of sinking?",
+    "response": "Ice is less dense than water",
+    "reasoning": "Since ice is less dense than water (0.92 < 1.0), it floats.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "reasoning",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "fe612b35-9c67-4ab8-ba4a-e09cd7fe37f4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why does ice float on water instead of sinking?",
+    "response": "Ice is less dense than water",
+    "reasoning": "Ice floats because it is less dense than liquid water due to its crystalline structure.",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "fe612b35-9c67-4ab8-ba4a-e09cd7fe37f4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Hand is to glove as foot is to ___?",
+    "response": "Sock",
+    "reasoning": "This is an analogy question. I need to find the relationship between hand and glove, then apply it to foot.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "db8f5eff-2648-4f43-b230-c84e77fb5acf"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You need to be at work by 9:00 AM. It takes 30 minutes to get ready and 20 minutes to commute. What time should you wake up at the latest?",
+    "response": "8:10 AM",
+    "reasoning": "Let me list what I know: 30 minutes to get ready, 20 minutes to commute.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "thinking",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 2,
+      "chain_id": "21210f10-8cee-4f8c-9445-e61d9b2d15b4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You need to be at work by 9:00 AM. It takes 30 minutes to get ready and 20 minutes to commute. What time should you wake up at the latest?",
+    "response": "8:10 AM",
+    "reasoning": "I should wake up by 8:10 AM at the latest.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 2,
+      "chain_id": "21210f10-8cee-4f8c-9445-e61d9b2d15b4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A pizza is cut into 8 equal slices. Tom eats 3 slices, and his sister eats 2 slices. What fraction of the pizza is left?",
+    "response": "3/8",
+    "reasoning": "Okay, this is a fraction problem about pizza. Yum! Let me focus on the math though.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "72ab9fda-097f-4ac1-acf5-c0672becc252"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A pizza is cut into 8 equal slices. Tom eats 3 slices, and his sister eats 2 slices. What fraction of the pizza is left?",
+    "response": "3/8",
+    "reasoning": "So we have 8 slices total. Tom eats 3, sister eats 2. I need to find what's left.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "restatement",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "72ab9fda-097f-4ac1-acf5-c0672becc252"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A pizza is cut into 8 equal slices. Tom eats 3 slices, and his sister eats 2 slices. What fraction of the pizza is left?",
+    "response": "3/8",
+    "reasoning": "Total eaten = 3 + 2 = 5 slices",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "calculation",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "72ab9fda-097f-4ac1-acf5-c0672becc252"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A pizza is cut into 8 equal slices. Tom eats 3 slices, and his sister eats 2 slices. What fraction of the pizza is left?",
+    "response": "3/8",
+    "reasoning": "Now I need to express this as a fraction of the whole pizza.",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "72ab9fda-097f-4ac1-acf5-c0672becc252"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A pizza is cut into 8 equal slices. Tom eats 3 slices, and his sister eats 2 slices. What fraction of the pizza is left?",
+    "response": "3/8",
+    "reasoning": "3/8 of the pizza is left.",
+    "metadata": {
+      "step_index": 7,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "72ab9fda-097f-4ac1-acf5-c0672becc252"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All dogs are animals. Buddy is a dog. Is Buddy an animal?",
+    "response": "Yes",
+    "reasoning": "Okay, let me carefully read this question. It says all dogs are animals, and Buddy is a dog.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "4a82a237-5851-4054-8c74-1001dba98000"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All dogs are animals. Buddy is a dog. Is Buddy an animal?",
+    "response": "Yes",
+    "reasoning": "Hmm, before I answer, let me make sure I understand what \"all\" means. \"All\" means every single one without exception.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 4,
+      "total_judgments": 4,
+      "chain_id": "4a82a237-5851-4054-8c74-1001dba98000"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All dogs are animals. Buddy is a dog. Is Buddy an animal?",
+    "response": "Yes",
+    "reasoning": "So if ALL dogs are animals, and Buddy is confirmed to be a dog...",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "4a82a237-5851-4054-8c74-1001dba98000"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All dogs are animals. Buddy is a dog. Is Buddy an animal?",
+    "response": "Yes",
+    "reasoning": "Wait, let me double-check my reasoning. Is there any way Buddy could be a dog but NOT an animal? No, because we established ALL dogs are animals.",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "4a82a237-5851-4054-8c74-1001dba98000"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All dogs are animals. Buddy is a dog. Is Buddy an animal?",
+    "response": "Yes",
+    "reasoning": "Yes, Buddy is an animal.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "4a82a237-5851-4054-8c74-1001dba98000"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What will this Python code print? \\nfor i in range(3):\\n    print(i * 2)",
+    "response": "0, 2, 4",
+    "reasoning": "The code prints: 0, 2, 4 (each on a new line)",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 5,
+      "chain_id": "9e529031-46e3-4762-a2ec-e892ce31dbb7"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "In a room of 30 people, what is the probability that at least two people share a birthday? (Assume 365 days in a year)",
+    "response": "~70%",
+    "reasoning": "Ah, the famous birthday problem! This is counterintuitive for most people.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 4,
+      "total_judgments": 4,
+      "chain_id": "4acbf39d-1eda-4509-95c3-ce4690034cc1"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "In a room of 30 people, what is the probability that at least two people share a birthday? (Assume 365 days in a year)",
+    "response": "~70%",
+    "reasoning": "It's easier to calculate the probability that NO ONE shares a birthday, then subtract from 1.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "approach",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "4acbf39d-1eda-4509-95c3-ce4690034cc1"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "In a room of 30 people, what is the probability that at least two people share a birthday? (Assume 365 days in a year)",
+    "response": "~70%",
+    "reasoning": "Let me make sure I remember how probability works with independent events... yes, we multiply probabilities.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "4acbf39d-1eda-4509-95c3-ce4690034cc1"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "In a room of 30 people, what is the probability that at least two people share a birthday? (Assume 365 days in a year)",
+    "response": "~70%",
+    "reasoning": "P(no shared birthdays) = (365/365) × (364/365) × (363/365) × ... × (336/365)",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "calculation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "4acbf39d-1eda-4509-95c3-ce4690034cc1"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "In a room of 30 people, what is the probability that at least two people share a birthday? (Assume 365 days in a year)",
+    "response": "~70%",
+    "reasoning": "P(no shared) ≈ 0.2937 (calculated using the product formula)",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "calculation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "4acbf39d-1eda-4509-95c3-ce4690034cc1"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "In a room of 30 people, what is the probability that at least two people share a birthday? (Assume 365 days in a year)",
+    "response": "~70%",
+    "reasoning": "P(at least one shared) = 1 - 0.2937 = 0.7063",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "calculation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "4acbf39d-1eda-4509-95c3-ce4690034cc1"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Five houses in a row are painted different colors. The English person lives in the red house. The Spanish person owns a dog. Coffee is drunk in the green house. The green house is immediately to the right of the ivory house. The person who drinks milk lives in the middle house. Who owns the zebra?",
+    "response": "The Japanese person owns the zebra.",
+    "reasoning": "This is an Einstein riddle variant. I need to use the clues systematically.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 7,
+      "total_judgments": 7,
+      "chain_id": "ea7397c0-da93-4989-8eff-b24e4d27b7df"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Five houses in a row are painted different colors. The English person lives in the red house. The Spanish person owns a dog. Coffee is drunk in the green house. The green house is immediately to the right of the ivory house. The person who drinks milk lives in the middle house. Who owns the zebra?",
+    "response": "The Japanese person owns the zebra.",
+    "reasoning": "Let me list all the clues and what positions we know...",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 7,
+      "total_judgments": 7,
+      "chain_id": "ea7397c0-da93-4989-8eff-b24e4d27b7df"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Five houses in a row are painted different colors. The English person lives in the red house. The Spanish person owns a dog. Coffee is drunk in the green house. The green house is immediately to the right of the ivory house. The person who drinks milk lives in the middle house. Who owns the zebra?",
+    "response": "The Japanese person owns the zebra.",
+    "reasoning": "Middle house (position 3) = milk drinker.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 71.43,
+      "flag_count": 5,
+      "total_judgments": 7,
+      "chain_id": "ea7397c0-da93-4989-8eff-b24e4d27b7df"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What is the bug in this code?\\ndef factorial(n):\\n    if n == 0:\\n        return 1\\n    return n * factorial(n)",
+    "response": "Infinite recursion - should be factorial(n-1)",
+    "reasoning": "Factorial of n is n × (n-1) × (n-2) × ... × 1. And factorial(0) = 1 by definition.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "understanding",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "ddedd0fe-e11c-4a38-aff0-fc5a7242ac13"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What is the bug in this code?\\ndef factorial(n):\\n    if n == 0:\\n        return 1\\n    return n * factorial(n)",
+    "response": "Infinite recursion - should be factorial(n-1)",
+    "reasoning": "The bug is infinite recursion! The recursive call should be factorial(n-1), not factorial(n).",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "identification",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "ddedd0fe-e11c-4a38-aff0-fc5a7242ac13"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "The Roman Empire fell in 476 CE, but the Byzantine Empire (Eastern Roman Empire) continued until 1453 CE. What key factors explain this nearly 1000-year difference in survival?",
+    "response": "Constantinople's strategic defensible location, control of East-West trade routes, more stable centralized government, and military/diplomatic advantages allowed Byzantium to survive nearly 1000 years longer.",
+    "reasoning": "Let me think about what specific advantages Byzantium had...",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 71.43,
+      "flag_count": 5,
+      "total_judgments": 7,
+      "chain_id": "2408a379-b562-4643-a391-7593105a5c16"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "The Roman Empire fell in 476 CE, but the Byzantine Empire (Eastern Roman Empire) continued until 1453 CE. What key factors explain this nearly 1000-year difference in survival?",
+    "response": "Constantinople's strategic defensible location, control of East-West trade routes, more stable centralized government, and military/diplomatic advantages allowed Byzantium to survive nearly 1000 years longer.",
+    "reasoning": "Geographic advantage: Constantinople was protected by water on three sides and massive walls.",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "reasoning",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 71.43,
+      "flag_count": 5,
+      "total_judgments": 7,
+      "chain_id": "2408a379-b562-4643-a391-7593105a5c16"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "The Roman Empire fell in 476 CE, but the Byzantine Empire (Eastern Roman Empire) continued until 1453 CE. What key factors explain this nearly 1000-year difference in survival?",
+    "response": "Constantinople's strategic defensible location, control of East-West trade routes, more stable centralized government, and military/diplomatic advantages allowed Byzantium to survive nearly 1000 years longer.",
+    "reasoning": "Economic advantage: Controlled trade routes between Europe and Asia.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "reasoning",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 71.43,
+      "flag_count": 5,
+      "total_judgments": 7,
+      "chain_id": "2408a379-b562-4643-a391-7593105a5c16"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "The Roman Empire fell in 476 CE, but the Byzantine Empire (Eastern Roman Empire) continued until 1453 CE. What key factors explain this nearly 1000-year difference in survival?",
+    "response": "Constantinople's strategic defensible location, control of East-West trade routes, more stable centralized government, and military/diplomatic advantages allowed Byzantium to survive nearly 1000 years longer.",
+    "reasoning": "Administrative advantage: More centralized, efficient bureaucracy.",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "reasoning",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 71.43,
+      "flag_count": 5,
+      "total_judgments": 7,
+      "chain_id": "2408a379-b562-4643-a391-7593105a5c16"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "The Roman Empire fell in 476 CE, but the Byzantine Empire (Eastern Roman Empire) continued until 1453 CE. What key factors explain this nearly 1000-year difference in survival?",
+    "response": "Constantinople's strategic defensible location, control of East-West trade routes, more stable centralized government, and military/diplomatic advantages allowed Byzantium to survive nearly 1000 years longer.",
+    "reasoning": "I need to compare the circumstances of both empires.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 85.71,
+      "flag_count": 6,
+      "total_judgments": 7,
+      "chain_id": "2408a379-b562-4643-a391-7593105a5c16"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "The Roman Empire fell in 476 CE, but the Byzantine Empire (Eastern Roman Empire) continued until 1453 CE. What key factors explain this nearly 1000-year difference in survival?",
+    "response": "Constantinople's strategic defensible location, control of East-West trade routes, more stable centralized government, and military/diplomatic advantages allowed Byzantium to survive nearly 1000 years longer.",
+    "reasoning": "Western Rome faced: Germanic invasions, economic decline, overextension, political instability.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 71.43,
+      "flag_count": 5,
+      "total_judgments": 7,
+      "chain_id": "2408a379-b562-4643-a391-7593105a5c16"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Decode: If APPLE = 50, BANANA = 42, and CHERRY = 60, what does GRAPE equal?",
+    "response": "GRAPE = 47 (using letter positions: G=7, R=18, A=1, P=16, E=5)",
+    "reasoning": "Going back to simple sum: GRAPE = G(7)+R(18)+A(1)+P(16)+E(5) = 47",
+    "metadata": {
+      "step_index": 9,
+      "step_type": "reasoning",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 10,
+      "chain_id": "0befb940-769e-4aa8-a2c0-2e0584aaad72"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A tech company claims their AI hiring tool is unbiased because it was trained on successful employee data. The tool rejects 80% of female applicants but only 50% of male applicants. The company says this isn't discriminatory because the AI just learned patterns from historical data. Evaluate this argument.",
+    "response": "The argument is flawed. Historical data often contains historical biases, so the AI perpetuates discrimination. Disparate impact (80% vs 50%) may be illegal regardless of intent. \"Learning patterns\" explains but doesn't justify the bias.",
+    "reasoning": "Let me consider the company's defense more carefully...",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 76.92,
+      "flag_count": 10,
+      "total_judgments": 13,
+      "chain_id": "7f7cd751-d580-43ec-9790-24cfcd62c86d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A tech company claims their AI hiring tool is unbiased because it was trained on successful employee data. The tool rejects 80% of female applicants but only 50% of male applicants. The company says this isn't discriminatory because the AI just learned patterns from historical data. Evaluate this argument.",
+    "response": "The argument is flawed. Historical data often contains historical biases, so the AI perpetuates discrimination. Disparate impact (80% vs 50%) may be illegal regardless of intent. \"Learning patterns\" explains but doesn't justify the bias.",
+    "reasoning": "'The AI learned patterns' doesn't justify discrimination - it just explains the mechanism.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 76.92,
+      "flag_count": 10,
+      "total_judgments": 13,
+      "chain_id": "7f7cd751-d580-43ec-9790-24cfcd62c86d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A tech company claims their AI hiring tool is unbiased because it was trained on successful employee data. The tool rejects 80% of female applicants but only 50% of male applicants. The company says this isn't discriminatory because the AI just learned patterns from historical data. Evaluate this argument.",
+    "response": "The argument is flawed. Historical data often contains historical biases, so the AI perpetuates discrimination. Disparate impact (80% vs 50%) may be illegal regardless of intent. \"Learning patterns\" explains but doesn't justify the bias.",
+    "reasoning": "The claim: Training on historical data = unbiased.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 92.31,
+      "flag_count": 12,
+      "total_judgments": 13,
+      "chain_id": "7f7cd751-d580-43ec-9790-24cfcd62c86d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Three people (A, B, C) are in a room. A always tells the truth. B always lies. C randomly tells truth or lies. A says \"B is not the random one.\" B says \"I am not the random one.\" Who is the random one?",
+    "response": "C",
+    "reasoning": "C is the random one.",
+    "metadata": {
+      "step_index": 8,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 6,
+      "chain_id": "bd506fe6-15ad-48e0-9f64-170c4ddca5b0"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Three people (A, B, C) are in a room. A always tells the truth. B always lies. C randomly tells truth or lies. A says \"B is not the random one.\" B says \"I am not the random one.\" Who is the random one?",
+    "response": "C",
+    "reasoning": "This is a classic logic puzzle with truth-tellers and liars. Let me work through it systematically.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 6,
+      "total_judgments": 6,
+      "chain_id": "bd506fe6-15ad-48e0-9f64-170c4ddca5b0"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Three people (A, B, C) are in a room. A always tells the truth. B always lies. C randomly tells truth or lies. A says \"B is not the random one.\" B says \"I am not the random one.\" Who is the random one?",
+    "response": "C",
+    "reasoning": "We know: A = truth-teller, B = liar, C = random. I need to figure out who is who.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "setup",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 6,
+      "total_judgments": 6,
+      "chain_id": "bd506fe6-15ad-48e0-9f64-170c4ddca5b0"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Three people (A, B, C) are in a room. A always tells the truth. B always lies. C randomly tells truth or lies. A says \"B is not the random one.\" B says \"I am not the random one.\" Who is the random one?",
+    "response": "C",
+    "reasoning": "Wait, actually the problem already tells us A always tells truth and B always lies. So we know their identities.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 83.33,
+      "flag_count": 5,
+      "total_judgments": 6,
+      "chain_id": "bd506fe6-15ad-48e0-9f64-170c4ddca5b0"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A study found that countries with more ice cream sales have higher rates of drowning deaths. Does this prove ice cream causes drowning?",
+    "response": "No. This is correlation, not causation. A confounding variable (hot weather/summer) causes both: people buy more ice cream AND swim more, leading to more drownings.",
+    "reasoning": "Let me consider: Does eating ice cream directly cause drowning?",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 83.33,
+      "flag_count": 5,
+      "total_judgments": 6,
+      "chain_id": "fb32e785-e1ad-4e7a-9de6-8ff7dc4873b3"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A study found that countries with more ice cream sales have higher rates of drowning deaths. Does this prove ice cream causes drowning?",
+    "response": "No. This is correlation, not causation. A confounding variable (hot weather/summer) causes both: people buy more ice cream AND swim more, leading to more drownings.",
+    "reasoning": "There's no plausible mechanism for ice cream to cause drowning directly.",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "reasoning",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 83.33,
+      "flag_count": 5,
+      "total_judgments": 6,
+      "chain_id": "fb32e785-e1ad-4e7a-9de6-8ff7dc4873b3"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A man is found dead in a field. Near him is an unopened package. There are no other people or animals around, and no footprints except his own, which come from the road. How did he die?",
+    "response": "The unopened package was a parachute that failed to open. The man fell from an aircraft.",
+    "reasoning": "The unopened package was his parachute. He died because it failed to deploy.",
+    "metadata": {
+      "step_index": 8,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 8.33,
+      "flag_count": 1,
+      "total_judgments": 12,
+      "chain_id": "3b486075-cadd-4370-910c-3b5263cc4ffb"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A man is found dead in a field. Near him is an unopened package. There are no other people or animals around, and no footprints except his own, which come from the road. How did he die?",
+    "response": "The unopened package was a parachute that failed to open. The man fell from an aircraft.",
+    "reasoning": "This is a lateral thinking puzzle. I need to think beyond the obvious.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 12,
+      "total_judgments": 12,
+      "chain_id": "3b486075-cadd-4370-910c-3b5263cc4ffb"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A man is found dead in a field. Near him is an unopened package. There are no other people or animals around, and no footprints except his own, which come from the road. How did he die?",
+    "response": "The unopened package was a parachute that failed to open. The man fell from an aircraft.",
+    "reasoning": "Key facts: dead man, unopened package, alone, footprints from road only.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 9,
+      "total_judgments": 12,
+      "chain_id": "3b486075-cadd-4370-910c-3b5263cc4ffb"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All roses are flowers. Some flowers fade quickly. Can we conclude that all roses fade quickly?",
+    "response": "No",
+    "reasoning": "This is a syllogism problem. Let me carefully analyze the logical structure.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "85712248-90dc-4bd0-91a5-04a018cca7fa"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All roses are flowers. Some flowers fade quickly. Can we conclude that all roses fade quickly?",
+    "response": "No",
+    "reasoning": "Let me restate the premises: Premise 1: All roses are flowers. Premise 2: Some flowers fade quickly. Question: Do all roses fade quickly?",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "restatement",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "85712248-90dc-4bd0-91a5-04a018cca7fa"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All roses are flowers. Some flowers fade quickly. Can we conclude that all roses fade quickly?",
+    "response": "No",
+    "reasoning": "This is actually a classic logical fallacy test. Just because roses are a subset of flowers, and SOME flowers have a property, doesn't mean ALL roses have that property.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "85712248-90dc-4bd0-91a5-04a018cca7fa"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All roses are flowers. Some flowers fade quickly. Can we conclude that all roses fade quickly?",
+    "response": "No",
+    "reasoning": "The key word is \"some\" - this means at least one, but not necessarily all. The flowers that fade quickly might or might not include roses.",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "reasoning",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "85712248-90dc-4bd0-91a5-04a018cca7fa"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All roses are flowers. Some flowers fade quickly. Can we conclude that all roses fade quickly?",
+    "response": "No",
+    "reasoning": "For example: All cats are mammals. Some mammals can fly (bats). This doesn't mean cats can fly!",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "example",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "85712248-90dc-4bd0-91a5-04a018cca7fa"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All roses are flowers. Some flowers fade quickly. Can we conclude that all roses fade quickly?",
+    "response": "No",
+    "reasoning": "Let me make sure: Could some roses fade quickly? Yes, possibly. MUST all roses fade quickly? No, we cannot conclude this.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "verification",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "85712248-90dc-4bd0-91a5-04a018cca7fa"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "All roses are flowers. Some flowers fade quickly. Can we conclude that all roses fade quickly?",
+    "response": "No",
+    "reasoning": "No, we cannot conclude that all roses fade quickly. This would be an invalid logical inference.",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "85712248-90dc-4bd0-91a5-04a018cca7fa"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Read: \"The Turing Test, proposed by Alan Turing in 1950, suggests that if a machine can engage in conversation indistinguishable from a human, it can be considered intelligent. Critics argue this only tests imitation, not true understanding.\" What is the main criticism of the Turing Test?",
+    "response": "It only tests imitation, not true understanding",
+    "reasoning": "Let me parse this passage about the Turing Test.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 83.33,
+      "flag_count": 5,
+      "total_judgments": 6,
+      "chain_id": "033aba15-cfe8-43bd-87fa-e8859be525d4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Read: \"The Turing Test, proposed by Alan Turing in 1950, suggests that if a machine can engage in conversation indistinguishable from a human, it can be considered intelligent. Critics argue this only tests imitation, not true understanding.\" What is the main criticism of the Turing Test?",
+    "response": "It only tests imitation, not true understanding",
+    "reasoning": "The passage states: The test checks if a machine's conversation is indistinguishable from a human's.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "extraction",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 6,
+      "total_judgments": 6,
+      "chain_id": "033aba15-cfe8-43bd-87fa-e8859be525d4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You have 12 identical-looking coins. One is counterfeit and has a different weight (could be heavier or lighter). Using a balance scale exactly 3 times, how do you identify the counterfeit coin AND determine if it's heavier or lighter?",
+    "response": "Divide coins into 3 groups of 4. Weigh 4 vs 4. Based on result (balanced or which side heavy), narrow down and track heavy/light info through 2 more strategic weighings.",
+    "reasoning": "This is a classic weighing puzzle. I need a strategy that works in exactly 3 weighings.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 87.5,
+      "flag_count": 7,
+      "total_judgments": 8,
+      "chain_id": "e854cdae-ae2a-4943-aad9-cbebe3207d49"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You have 12 identical-looking coins. One is counterfeit and has a different weight (could be heavier or lighter). Using a balance scale exactly 3 times, how do you identify the counterfeit coin AND determine if it's heavier or lighter?",
+    "response": "Divide coins into 3 groups of 4. Weigh 4 vs 4. Based on result (balanced or which side heavy), narrow down and track heavy/light info through 2 more strategic weighings.",
+    "reasoning": "With 3 weighings, I can distinguish between 3^3 = 27 outcomes. I need to identify 1 of 12 coins AND whether it's heavy or light = 24 possibilities. This is achievable.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 6,
+      "total_judgments": 8,
+      "chain_id": "e854cdae-ae2a-4943-aad9-cbebe3207d49"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You have 12 identical-looking coins. One is counterfeit and has a different weight (could be heavier or lighter). Using a balance scale exactly 3 times, how do you identify the counterfeit coin AND determine if it's heavier or lighter?",
+    "response": "Divide coins into 3 groups of 4. Weigh 4 vs 4. Based on result (balanced or which side heavy), narrow down and track heavy/light info through 2 more strategic weighings.",
+    "reasoning": "Weighing 1: Put 4 coins on each side, leave 4 aside.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "strategy",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 6,
+      "total_judgments": 8,
+      "chain_id": "e854cdae-ae2a-4943-aad9-cbebe3207d49"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You have 12 identical-looking coins. One is counterfeit and has a different weight (could be heavier or lighter). Using a balance scale exactly 3 times, how do you identify the counterfeit coin AND determine if it's heavier or lighter?",
+    "response": "Divide coins into 3 groups of 4. Weigh 4 vs 4. Based on result (balanced or which side heavy), narrow down and track heavy/light info through 2 more strategic weighings.",
+    "reasoning": "Divide into groups of 4. Each weighing eliminates 2/3 of possibilities while tracking the heavy/light information from how the scale tips.",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 8,
+      "chain_id": "e854cdae-ae2a-4943-aad9-cbebe3207d49"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What is the time complexity of this code?\\ndef mystery(n):\\n    if n <= 1:\\n        return 1\\n    return mystery(n-1) + mystery(n-1)",
+    "response": "O(2^n)",
+    "reasoning": "I need to analyze the time complexity of this recursive function.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 90.91,
+      "flag_count": 10,
+      "total_judgments": 11,
+      "chain_id": "292a1358-ad5e-432f-805a-084f5e7330c1"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What is the time complexity of this code?\\ndef mystery(n):\\n    if n <= 1:\\n        return 1\\n    return mystery(n-1) + mystery(n-1)",
+    "response": "O(2^n)",
+    "reasoning": "mystery(n) calls mystery(n-1) twice. Each of those calls mystery(n-2) twice. And so on.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "tracing",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 81.82,
+      "flag_count": 9,
+      "total_judgments": 11,
+      "chain_id": "292a1358-ad5e-432f-805a-084f5e7330c1"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What is the time complexity of this code?\\ndef mystery(n):\\n    if n <= 1:\\n        return 1\\n    return mystery(n-1) + mystery(n-1)",
+    "response": "O(2^n)",
+    "reasoning": "Let me draw the recursion tree mentally. At level 0: 1 call. Level 1: 2 calls. Level 2: 4 calls...",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 81.82,
+      "flag_count": 9,
+      "total_judgments": 11,
+      "chain_id": "292a1358-ad5e-432f-805a-084f5e7330c1"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What is the time complexity of this code?\\ndef mystery(n):\\n    if n <= 1:\\n        return 1\\n    return mystery(n-1) + mystery(n-1)",
+    "response": "O(2^n)",
+    "reasoning": "The time complexity is O(2^n) - exponential.",
+    "metadata": {
+      "step_index": 8,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 11,
+      "chain_id": "292a1358-ad5e-432f-805a-084f5e7330c1"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You're planning a trip. Flight A costs $300 and arrives at 2 PM. Flight B costs $200 but arrives at 11 PM. A taxi from the airport costs $40, but after 10 PM it's $60. Your hotel charges $50 for late check-in (after 6 PM). Which flight is actually cheaper?",
+    "response": "Flight B is cheaper at $310 total ($200 + $60 taxi + $50 late check-in) compared to Flight A at $340.",
+    "reasoning": "Flight A total: $340",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "calculation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 6,
+      "chain_id": "e9795962-12b1-475c-80d3-3829075994ad"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why is the sky blue during the day but red/orange during sunset?",
+    "response": "Rayleigh scattering",
+    "reasoning": "Sunlight contains all colors (wavelengths). Blue light has a shorter wavelength (~450nm) than red light (~700nm).",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "background",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "88a18fdd-544c-4532-9d16-a282562a7cd4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why is the sky blue during the day but red/orange during sunset?",
+    "response": "Rayleigh scattering",
+    "reasoning": "I should probably explain the electromagnetic spectrum here... actually, let me stay focused on the question.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "88a18fdd-544c-4532-9d16-a282562a7cd4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why is the sky blue during the day but red/orange during sunset?",
+    "response": "Rayleigh scattering",
+    "reasoning": "During the day: Blue light scatters in all directions, reaching our eyes from all parts of the sky. Hence, blue sky.",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "reasoning",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "88a18fdd-544c-4532-9d16-a282562a7cd4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why is the sky blue during the day but red/orange during sunset?",
+    "response": "Rayleigh scattering",
+    "reasoning": "During sunset: Light travels through more atmosphere. Blue light scatters away before reaching us, leaving red/orange.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "reasoning",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "88a18fdd-544c-4532-9d16-a282562a7cd4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why is the sky blue during the day but red/orange during sunset?",
+    "response": "Rayleigh scattering",
+    "reasoning": "This also explains why the sun itself looks yellow/white at noon but red at sunset.",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "verification",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "88a18fdd-544c-4532-9d16-a282562a7cd4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why is the sky blue during the day but red/orange during sunset?",
+    "response": "Rayleigh scattering",
+    "reasoning": "The sky is blue because blue light scatters more (Rayleigh scattering). At sunset, blue scatters away over the longer path, leaving red/orange.",
+    "metadata": {
+      "step_index": 7,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "88a18fdd-544c-4532-9d16-a282562a7cd4"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why can't you see stars during the day?",
+    "response": "Sunlight is too bright",
+    "reasoning": "The stars are actually still there during the day. So why can't we see them?",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "db448fb4-13b1-458d-8821-317662d56368"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why can't you see stars during the day?",
+    "response": "Sunlight is too bright",
+    "reasoning": "The Sun's light is scattered by Earth's atmosphere, making the sky bright blue.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "explanation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "db448fb4-13b1-458d-8821-317662d56368"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why can't you see stars during the day?",
+    "response": "Sunlight is too bright",
+    "reasoning": "This scattered sunlight is so bright that it overwhelms the faint light from distant stars.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "reasoning",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "db448fb4-13b1-458d-8821-317662d56368"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why can't you see stars during the day?",
+    "response": "Sunlight is too bright",
+    "reasoning": "It's like trying to see a candle flame when someone shines a flashlight in your eyes.",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "analogy",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "db448fb4-13b1-458d-8821-317662d56368"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why can't you see stars during the day?",
+    "response": "Sunlight is too bright",
+    "reasoning": "From space, astronauts can see stars at any time because there's no atmosphere to scatter light.",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "fact",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "db448fb4-13b1-458d-8821-317662d56368"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why can't you see stars during the day?",
+    "response": "Sunlight is too bright",
+    "reasoning": "Stars aren't visible during the day because sunlight scattered by the atmosphere is too bright.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "db448fb4-13b1-458d-8821-317662d56368"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A rectangle has length 12 and width 5. What is its area?",
+    "response": "60 square units",
+    "reasoning": "I need to find the area of a rectangle with length 12 and width 5.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "890fafb8-90e4-474c-9ada-7812dc7c9143"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A rectangle has length 12 and width 5. What is its area?",
+    "response": "60 square units",
+    "reasoning": "The formula for area of a rectangle is: Area = length × width",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "890fafb8-90e4-474c-9ada-7812dc7c9143"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A rectangle has length 12 and width 5. What is its area?",
+    "response": "60 square units",
+    "reasoning": "Area = 12 × 5 = 60",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "calculation",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "890fafb8-90e4-474c-9ada-7812dc7c9143"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A rectangle has length 12 and width 5. What is its area?",
+    "response": "60 square units",
+    "reasoning": "Let me double-check: 12 × 5. That's 10×5=50 plus 2×5=10, so 60. Correct!",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "verification",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "890fafb8-90e4-474c-9ada-7812dc7c9143"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A rectangle has length 12 and width 5. What is its area?",
+    "response": "60 square units",
+    "reasoning": "The area is 60 square units.",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "890fafb8-90e4-474c-9ada-7812dc7c9143"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A car depreciates by 15% each year. If it's worth $20,000 now, what was its value 2 years ago?",
+    "response": "~$27,682",
+    "reasoning": "This is reverse depreciation. I need to work backwards.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 80.0,
+      "flag_count": 8,
+      "total_judgments": 10,
+      "chain_id": "dd8d3b67-3600-4844-9b07-e458a6095b5f"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "A car depreciates by 15% each year. If it's worth $20,000 now, what was its value 2 years ago?",
+    "response": "~$27,682",
+    "reasoning": "The car was worth approximately $27,682 two years ago.",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 10,
+      "chain_id": "dd8d3b67-3600-4844-9b07-e458a6095b5f"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Argument: \"This restaurant must be good because it's always crowded.\" Is this reasoning valid?",
+    "response": "The reasoning is not valid. This is an appeal to popularity fallacy - crowded doesn't necessarily mean good quality.",
+    "reasoning": "I need to evaluate if the conclusion follows from the premise.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "c470d4ac-4cff-4eb8-a402-5a819328b85d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Argument: \"This restaurant must be good because it's always crowded.\" Is this reasoning valid?",
+    "response": "The reasoning is not valid. This is an appeal to popularity fallacy - crowded doesn't necessarily mean good quality.",
+    "reasoning": "Premise: The restaurant is always crowded.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "c470d4ac-4cff-4eb8-a402-5a819328b85d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Argument: \"This restaurant must be good because it's always crowded.\" Is this reasoning valid?",
+    "response": "The reasoning is not valid. This is an appeal to popularity fallacy - crowded doesn't necessarily mean good quality.",
+    "reasoning": "Conclusion: The restaurant must be good.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "c470d4ac-4cff-4eb8-a402-5a819328b85d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Argument: \"This restaurant must be good because it's always crowded.\" Is this reasoning valid?",
+    "response": "The reasoning is not valid. This is an appeal to popularity fallacy - crowded doesn't necessarily mean good quality.",
+    "reasoning": "Does being crowded necessarily mean being good?",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "c470d4ac-4cff-4eb8-a402-5a819328b85d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Argument: \"This restaurant must be good because it's always crowded.\" Is this reasoning valid?",
+    "response": "The reasoning is not valid. This is an appeal to popularity fallacy - crowded doesn't necessarily mean good quality.",
+    "reasoning": "A restaurant could be crowded for other reasons: cheap prices, convenient location, lack of alternatives, tourist trap, good marketing...",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "reasoning",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "c470d4ac-4cff-4eb8-a402-5a819328b85d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Argument: \"This restaurant must be good because it's always crowded.\" Is this reasoning valid?",
+    "response": "The reasoning is not valid. This is an appeal to popularity fallacy - crowded doesn't necessarily mean good quality.",
+    "reasoning": "Popularity doesn't always equal quality.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "reasoning",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "c470d4ac-4cff-4eb8-a402-5a819328b85d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why do we see lightning before we hear thunder?",
+    "response": "Light travels faster than sound",
+    "reasoning": "Let me recall some physics. Light travels at approximately 300,000 kilometers per second. Sound travels at approximately 343 meters per second in air.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "background",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 3,
+      "total_judgments": 3,
+      "chain_id": "829c9d3d-4d89-4ec9-9cf6-c25540753325"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why do we see lightning before we hear thunder?",
+    "response": "Light travels faster than sound",
+    "reasoning": "So light is roughly 300,000,000 / 343 ≈ 874,000 times faster than sound.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "calculation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 3,
+      "chain_id": "829c9d3d-4d89-4ec9-9cf6-c25540753325"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Why do we see lightning before we hear thunder?",
+    "response": "Light travels faster than sound",
+    "reasoning": "We see lightning before hearing thunder because light travels much faster than sound.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 3,
+      "chain_id": "829c9d3d-4d89-4ec9-9cf6-c25540753325"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Algorithm is to programmer as recipe is to ___?",
+    "response": "Chef",
+    "reasoning": "An algorithm is a set of step-by-step instructions that a programmer follows/creates to solve a problem.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "60c6a2cb-61f5-4927-8df3-652c3d0a9831"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Algorithm is to programmer as recipe is to ___?",
+    "response": "Chef",
+    "reasoning": "Actually, I should consider whether the programmer CREATES or FOLLOWS the algorithm. Both can be true, but let's think about the parallel.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 4,
+      "total_judgments": 4,
+      "chain_id": "60c6a2cb-61f5-4927-8df3-652c3d0a9831"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Algorithm is to programmer as recipe is to ___?",
+    "response": "Chef",
+    "reasoning": "A recipe is a set of step-by-step instructions for preparing food.",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 75.0,
+      "flag_count": 3,
+      "total_judgments": 4,
+      "chain_id": "60c6a2cb-61f5-4927-8df3-652c3d0a9831"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Algorithm is to programmer as recipe is to ___?",
+    "response": "Chef",
+    "reasoning": "Chef (or cook) - both follow step-by-step instructions to produce an output.",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 4,
+      "chain_id": "60c6a2cb-61f5-4927-8df3-652c3d0a9831"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You have $50 for groceries. Milk costs $4, bread costs $3, eggs cost $5, and chicken costs $12. You need at least 2 of each item. Can you afford it, and how much will you have left?",
+    "response": "Yes, you can afford it with $2 left over.",
+    "reasoning": "I need to calculate the total cost for 2 of each item.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "154159d2-10e5-44f1-bc92-5a5686c94313"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You have $50 for groceries. Milk costs $4, bread costs $3, eggs cost $5, and chicken costs $12. You need at least 2 of each item. Can you afford it, and how much will you have left?",
+    "response": "Yes, you can afford it with $2 left over.",
+    "reasoning": "Milk: 2 × $4 = $8",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "calculation",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "154159d2-10e5-44f1-bc92-5a5686c94313"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You have $50 for groceries. Milk costs $4, bread costs $3, eggs cost $5, and chicken costs $12. You need at least 2 of each item. Can you afford it, and how much will you have left?",
+    "response": "Yes, you can afford it with $2 left over.",
+    "reasoning": "Bread: 2 × $3 = $6",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "calculation",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "154159d2-10e5-44f1-bc92-5a5686c94313"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You have $50 for groceries. Milk costs $4, bread costs $3, eggs cost $5, and chicken costs $12. You need at least 2 of each item. Can you afford it, and how much will you have left?",
+    "response": "Yes, you can afford it with $2 left over.",
+    "reasoning": "Eggs: 2 × $5 = $10",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "calculation",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "154159d2-10e5-44f1-bc92-5a5686c94313"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You have $50 for groceries. Milk costs $4, bread costs $3, eggs cost $5, and chicken costs $12. You need at least 2 of each item. Can you afford it, and how much will you have left?",
+    "response": "Yes, you can afford it with $2 left over.",
+    "reasoning": "Chicken: 2 × $12 = $24",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "calculation",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "154159d2-10e5-44f1-bc92-5a5686c94313"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You have $50 for groceries. Milk costs $4, bread costs $3, eggs cost $5, and chicken costs $12. You need at least 2 of each item. Can you afford it, and how much will you have left?",
+    "response": "Yes, you can afford it with $2 left over.",
+    "reasoning": "Let me verify each multiplication... 2×4=8 ✓, 2×3=6 ✓, 2×5=10 ✓, 2×12=24 ✓",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "verification",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "154159d2-10e5-44f1-bc92-5a5686c94313"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You have $50 for groceries. Milk costs $4, bread costs $3, eggs cost $5, and chicken costs $12. You need at least 2 of each item. Can you afford it, and how much will you have left?",
+    "response": "Yes, you can afford it with $2 left over.",
+    "reasoning": "Total: $8 + $6 + $10 + $24 = $48",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "calculation",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "154159d2-10e5-44f1-bc92-5a5686c94313"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You have $50 for groceries. Milk costs $4, bread costs $3, eggs cost $5, and chicken costs $12. You need at least 2 of each item. Can you afford it, and how much will you have left?",
+    "response": "Yes, you can afford it with $2 left over.",
+    "reasoning": "$48 < $50, so yes, I can afford it.",
+    "metadata": {
+      "step_index": 7,
+      "step_type": "comparison",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "154159d2-10e5-44f1-bc92-5a5686c94313"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "You have $50 for groceries. Milk costs $4, bread costs $3, eggs cost $5, and chicken costs $12. You need at least 2 of each item. Can you afford it, and how much will you have left?",
+    "response": "Yes, you can afford it with $2 left over.",
+    "reasoning": "Money left: $50 - $48 = $2",
+    "metadata": {
+      "step_index": 8,
+      "step_type": "calculation",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 2,
+      "total_judgments": 2,
+      "chain_id": "154159d2-10e5-44f1-bc92-5a5686c94313"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Passage: \"The company's profits rose 20% this quarter, but employee satisfaction surveys show a 15% decline. The CEO announced plans to expand into three new markets while simultaneously reducing the workforce by 10%.\" What tension does this passage reveal?",
+    "response": "The passage reveals tension between corporate financial success and employee welfare - profits and expansion are prioritized while workforce is reduced and satisfaction declines.",
+    "reasoning": "Positive: Profits up 20%, expansion planned.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 3,
+      "total_judgments": 3,
+      "chain_id": "69357cd8-ca08-4662-9bee-cdfa00a7930d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Passage: \"The company's profits rose 20% this quarter, but employee satisfaction surveys show a 15% decline. The CEO announced plans to expand into three new markets while simultaneously reducing the workforce by 10%.\" What tension does this passage reveal?",
+    "response": "The passage reveals tension between corporate financial success and employee welfare - profits and expansion are prioritized while workforce is reduced and satisfaction declines.",
+    "reasoning": "Negative: Employee satisfaction down 15%, workforce reduction 10%.",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "analysis",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 3,
+      "total_judgments": 3,
+      "chain_id": "69357cd8-ca08-4662-9bee-cdfa00a7930d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Passage: \"The company's profits rose 20% this quarter, but employee satisfaction surveys show a 15% decline. The CEO announced plans to expand into three new markets while simultaneously reducing the workforce by 10%.\" What tension does this passage reveal?",
+    "response": "The passage reveals tension between corporate financial success and employee welfare - profits and expansion are prioritized while workforce is reduced and satisfaction declines.",
+    "reasoning": "Let me reread to make sure I captured all elements...",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "thinking",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 3,
+      "chain_id": "69357cd8-ca08-4662-9bee-cdfa00a7930d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Passage: \"The company's profits rose 20% this quarter, but employee satisfaction surveys show a 15% decline. The CEO announced plans to expand into three new markets while simultaneously reducing the workforce by 10%.\" What tension does this passage reveal?",
+    "response": "The passage reveals tension between corporate financial success and employee welfare - profits and expansion are prioritized while workforce is reduced and satisfaction declines.",
+    "reasoning": "The company is financially successful but employees are unhappy.",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "reasoning",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 3,
+      "chain_id": "69357cd8-ca08-4662-9bee-cdfa00a7930d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Passage: \"The company's profits rose 20% this quarter, but employee satisfaction surveys show a 15% decline. The CEO announced plans to expand into three new markets while simultaneously reducing the workforce by 10%.\" What tension does this passage reveal?",
+    "response": "The passage reveals tension between corporate financial success and employee welfare - profits and expansion are prioritized while workforce is reduced and satisfaction declines.",
+    "reasoning": "The expansion while cutting workforce suggests prioritizing growth over employee welfare.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "reasoning",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 3,
+      "chain_id": "69357cd8-ca08-4662-9bee-cdfa00a7930d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Passage: \"The company's profits rose 20% this quarter, but employee satisfaction surveys show a 15% decline. The CEO announced plans to expand into three new markets while simultaneously reducing the workforce by 10%.\" What tension does this passage reveal?",
+    "response": "The passage reveals tension between corporate financial success and employee welfare - profits and expansion are prioritized while workforce is reduced and satisfaction declines.",
+    "reasoning": "This reveals a classic business tension: short-term shareholder gains vs. employee well-being.",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "analysis",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 3,
+      "chain_id": "69357cd8-ca08-4662-9bee-cdfa00a7930d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "Passage: \"The company's profits rose 20% this quarter, but employee satisfaction surveys show a 15% decline. The CEO announced plans to expand into three new markets while simultaneously reducing the workforce by 10%.\" What tension does this passage reveal?",
+    "response": "The passage reveals tension between corporate financial success and employee welfare - profits and expansion are prioritized while workforce is reduced and satisfaction declines.",
+    "reasoning": "The passage reveals tension between financial success/growth and employee morale/job security. The company prioritizes expansion and profits while employees bear the cost through layoffs and declining satisfaction.",
+    "metadata": {
+      "step_index": 7,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 3,
+      "chain_id": "69357cd8-ca08-4662-9bee-cdfa00a7930d"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What would happen to your weight if you traveled to the Moon?",
+    "response": "1/6 of Earth weight",
+    "reasoning": "This question is about the difference between mass and weight. Let me explain.",
+    "metadata": {
+      "step_index": 0,
+      "step_type": "thinking",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "2594c701-3104-48f5-bb38-bb821bc58ec3"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What would happen to your weight if you traveled to the Moon?",
+    "response": "1/6 of Earth weight",
+    "reasoning": "Weight = mass × gravitational acceleration. Mass stays constant, but gravity differs by location.",
+    "metadata": {
+      "step_index": 1,
+      "step_type": "background",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "2594c701-3104-48f5-bb38-bb821bc58ec3"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What would happen to your weight if you traveled to the Moon?",
+    "response": "1/6 of Earth weight",
+    "reasoning": "Earth's gravity: ~9.8 m/s². Moon's gravity: ~1.6 m/s² (about 1/6 of Earth's).",
+    "metadata": {
+      "step_index": 2,
+      "step_type": "fact",
+      "label": 0,
+      "label_name": "wasteful",
+      "consensus_pct": 100.0,
+      "flag_count": 1,
+      "total_judgments": 1,
+      "chain_id": "2594c701-3104-48f5-bb38-bb821bc58ec3"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What would happen to your weight if you traveled to the Moon?",
+    "response": "1/6 of Earth weight",
+    "reasoning": "So if I weigh 60 kg on Earth, on the Moon I would weigh... let me calculate.",
+    "metadata": {
+      "step_index": 3,
+      "step_type": "thinking",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "2594c701-3104-48f5-bb38-bb821bc58ec3"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What would happen to your weight if you traveled to the Moon?",
+    "response": "1/6 of Earth weight",
+    "reasoning": "Moon weight = Earth weight × (1/6) = 60 × (1/6) = 10 kg-force",
+    "metadata": {
+      "step_index": 4,
+      "step_type": "calculation",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "2594c701-3104-48f5-bb38-bb821bc58ec3"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What would happen to your weight if you traveled to the Moon?",
+    "response": "1/6 of Earth weight",
+    "reasoning": "Note: Your MASS stays 60 kg. Only your WEIGHT changes to about 10 kg-force.",
+    "metadata": {
+      "step_index": 5,
+      "step_type": "clarification",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "2594c701-3104-48f5-bb38-bb821bc58ec3"
+    }
+  },
+  {
+    "source": "thinktank-reasoning",
+    "model": "unknown",
+    "prompt": "What would happen to your weight if you traveled to the Moon?",
+    "response": "1/6 of Earth weight",
+    "reasoning": "Your weight would be about 1/6 of your Earth weight.",
+    "metadata": {
+      "step_index": 6,
+      "step_type": "conclusion",
+      "label": 1,
+      "label_name": "useful",
+      "consensus_pct": 0.0,
+      "flag_count": 0,
+      "total_judgments": 1,
+      "chain_id": "2594c701-3104-48f5-bb38-bb821bc58ec3"
+    }
+  }
+]

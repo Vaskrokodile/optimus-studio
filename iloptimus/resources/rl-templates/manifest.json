@@ -1,0 +1,36 @@
+{
+  "description": "RL trace templates for rl_mode. High-quality reasoning traces for RL environment design.",
+  "format": {
+    "input": "str - the task/problem",
+    "thinking_trace": "str - reasoning process",
+    "answer": "str - final answer/solution",
+    "source": "str - dataset origin",
+    "domain": "str - reasoning/coding/agentic/math"
+  },
+  "sources": {
+    "gpt5": {
+      "dataset": "Liontix/gpt5-reasoning-200x",
+      "rows": 8,
+      "domain": "reasoning",
+      "description": "GPT-5 reasoning traces"
+    },
+    "qwen35": {
+      "dataset": "Jackrong/Qwen3.5-reasoning-700x",
+      "rows": 8,
+      "domain": "reasoning",
+      "description": "Qwen 3.5-27B reasoning traces"
+    },
+    "fable5": {
+      "dataset": "Nexlab/fable5-agentic-coding-sft",
+      "rows": 8,
+      "domain": "agentic",
+      "description": "Fable 5 English agentic coding traces"
+    },
+    "kimi_k3": {
+      "dataset": "greghavens/kimi-k3-coding-and-debugging-traces",
+      "rows": 8,
+      "domain": "coding",
+      "description": "Kimi K3 coding and debugging traces"
+    }
+  }
+}

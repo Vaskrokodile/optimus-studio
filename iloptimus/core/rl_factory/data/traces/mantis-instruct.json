@@ -1,0 +1,602 @@
+[
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-MSR-VTT-videoTrainValVideo_video2044-shot1_0-6",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-MSR-VTT-videoTrainValVideo_video2044-shot1_0-7",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videochristmas_56Nm66j-i5Q-shot14_2-2",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videochristmas_56Nm66j-i5Q-shot14_2-3",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videochristmas_56Nm66j-i5Q-shot14_2-4",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-1283_0f0565064ea964f8-7",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videobirthday_5NyDtpFnEHA-shot19_21-2",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videobirthday_5NyDtpFnEHA-shot19_21-3",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videobirthday_5NyDtpFnEHA-shot19_21-4",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videowedding_hpqkfq1-f70-shot58_2-3",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videowedding_hpqkfq1-f70-shot58_2-4",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-2668_02b0a8f3a25f8d72-1",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-2668_02b0a8f3a25f8d72-5",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-2668_02b0a8f3a25f8d72-9",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videocamping_-TV0spQGAnM-shot59_0-6",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videocamping_-TV0spQGAnM-shot59_0-8",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videochristmas__bugNLgmCHs-shot25_0-3",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videochristmas__bugNLgmCHs-shot25_0-4",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videochristmas__bugNLgmCHs-shot25_0-5",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-MSR-VTT-videoTrainValVideo_video2453-shot1_1-2",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-MSR-VTT-videoTrainValVideo_video2453-shot1_1-4",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videocamping_av4OdEdoI7A-shot23_0-4",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videocamping_av4OdEdoI7A-shot23_0-5",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-MSR-VTT-videoTrainValVideo_video1445-shot1_0-6",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-1463_0c658a40338b7a50-5",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-1463_0c658a40338b7a50-1",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-1463_0c658a40338b7a50-7",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-2088_3011602a2e6d1c5b-0",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-2088_3011602a2e6d1c5b-5",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-2088_3011602a2e6d1c5b-4",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-MSR-VTT-videoTrainValVideo_video2453-shot1_3-8",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-MSR-VTT-videoTrainValVideo_video2453-shot1_3-9",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videowedding_hvwKOBVVO-M-shot38_0-7",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videochristmas_9pMCYohnRYM-shot141_9-3",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videochristmas_9pMCYohnRYM-shot141_9-4",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-2921_0bc01c379163ca66-9",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-2921_0bc01c379163ca66-5",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videobirthday_NWvTOHoShYk-shot29_29-4",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videobirthday_NWvTOHoShYk-shot29_29-5",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videobirthday_NWvTOHoShYk-shot29_29-6",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videocamping_4ctLEIuXrUA-shot30_2-3",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-video-storytelling-videocamping_4ctLEIuXrUA-shot30_2-4",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-MSR-VTT-videoTrainValVideo_video4526-shot1_9-5",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-MSR-VTT-videoTrainValVideo_video4526-shot1_9-6",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-2057_2fc6afbbb663b164-5",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-2057_2fc6afbbb663b164-7",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-open-images-2057_2fc6afbbb663b164-2",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-MSR-VTT-videoTrainValVideo_video895-shot1_0-5",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-MSR-VTT-videoTrainValVideo_video895-shot1_0-6",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  },
+  {
+    "source": "mantis-instruct",
+    "model": "unknown",
+    "prompt": "",
+    "response": "ImageCoDe-MSR-VTT-videoTrainValVideo_video7001-shot0_1-5",
+    "reasoning": "",
+    "metadata": {
+      "fallback_keys": [
+        "id"
+      ]
+    }
+  }
+]

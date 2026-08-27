@@ -1,0 +1,402 @@
+[
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Ava is planning a camping trip with her friends. She wants to make sure they have enough granola bars for snacks. There will be five people total: Ava, her two friends, and her parents. They will spend 3 days and 2 nights at the campsite, and they plan to have 2 granola bars per person for breakfast and 1 granola bar per person for an afternoon snack each day. How many granola bars will Ava need to pack in total for the entire trip?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Find the sum of all three-digit positive integers whose cubes end with the digits 125.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "What is the largest number, all of whose digits are 1 or 4, and whose digits add up to 12?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Two distinct primes, each greater than 20, are multiplied. What is the least possible product of these two primes?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "A farmer has 100 meters of fencing and wants to enclose a rectangular garden with an area of 500 square meters. If the farmer also wants to leave a 5-meter wide path around the entire garden, how many meters of fencing will be needed to enclose the garden and the path? Express your answer as a decimal to the nearest tenth.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "If $\\log (x^2y^2)= 3$ and $\\log (xy^4) = 4$,  what is $\\log (x^3y^2)$?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "If $f(x)$ and $g(x)$ are two rational functions such that the vertical asymptotes of $f(x)$ are canceled by the zeros of $g(x)$, and the degree of the denominator of $f(x) + g(x)$ is 2, what is the degree of the numerator of $g(x)$?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "There are 15 different-flavored candies in a bag. How many ways can Maria choose 5 candies if the order in which she selects them does not matter?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "The owner of a parking lot wants to label each parking space with a unique four-digit code using the digits 0 through 9. The code for each space must start with a non-zero digit, and no digit can be repeated within a code. If the owner wants to label 300 spaces, how many packages of digits must be purchased, assuming each package contains 10 of each digit?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Convert the point $(\\sqrt{2},-\\sqrt{2})$ in rectangular coordinates to polar coordinates.  Enter your answer in the form $(r,\\theta),$ where $r > 0$ and $0 \\le \\theta < 2 \\pi.$",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "In base $b$, there are exactly one hundred three-digit numbers whose digits are all distinct. (That's \"one hundred\" in the ordinary sense, $100_{10}$.)\n\nWhat is $b$?\n\nA new problem:\n\nIn a certain base $b$, the number of distinct digits used in all four-digit numbers is $b-1$. Find the sum of all such bases $b$.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Let $a$, $b$, and $c$ be positive real numbers such that $a + b + c = 1$. Find the maximum value of\n\\[\\frac{ab}{a + b} + \\frac{bc}{b + c} + \\frac{ca}{c + a}.\\]",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Let's consider a geometric shape with 4 sides: a quadrilateral. The sum of the lengths of any 3 sides is equal to 10 units.\n\nCan we find the length of the remaining side?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "What is the value of $a$ if \\begin{align*}a &= b+2,\\\\\nb &= c+6,\\\\\nc &= d+12,\\\\\n\\text{and }\\qquad d &= 25?\n\\end{align*}",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "A bookstore sells a total of 500 books per day, consisting of hardcover and paperback copies. The number of hardcover books sold daily is a multiple of 5, while the number of paperback books sold daily is a multiple of 3. If the average number of pages in a book sold daily is 250, and the average number of pages in a hardcover book is 10 more than the average number of pages in a paperback book, what is the ratio of the number of hardcover books sold to the number of paperback books sold?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Consider the function\n$$f(x)=\\ds\\sqrt{\\f{x-2}{x^2+3x-10}}$$\ndefined on the real line wherever it takes real values. Find the set of all values that $f(x)$ can possibly attain.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "What is the greatest common divisor of $2709$ and $2674$?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "The perimeter of a quadrilateral is 280 cm. If three of the sides are 60 cm, 70 cm, and 80 cm, calculate the length of the fourth side?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Consider the following functions: \n\nf(x) = x^3 + ax^2 - 2x + 1 \n\ng(x) = x^2 + bx - 3 \n\nDetermine the values of 'a' and 'b' such that (f(3) - g(2)) / (f(2) - g(3)) = 2.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Alex was given $75 by his father to buy supplies for his school project. He bought 3 packs of colored paper that cost $8 each and a set of markers that cost $15. How much money should Alex return to his father?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "The numbers $x$ and $x+1$ are positive integers, and their product $x(x+1)$ is divisible by 14. What is the smallest possible value of $x$?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "At a popular restaurant, 8 large pizzas are sold per hour during weekends, while on weekdays 5 large pizzas are sold per hour. If each large pizza is sold at $80, how much more money is made in a day during the weekend than on a weekday if the restaurant operates for 12 hours?\n\n(I'll stop here as per your request)",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "At a party, there are 10 people who speak either English or Spanish. If 4 people speak only English, 3 people speak only Spanish, and the remaining people speak both languages, what is the minimum number of conversations that can occur between people who speak the same language?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Simplify $\\sqrt[3]{2\\cdot 3^4 \\cdot 7^2}$.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Points $A$, $B$, $C$, and $D$ lie on a line, in that order. If $AB=2$ units, $BC=5$ units and $AD=14$ units, what is the ratio of $AC$ to $BD$? Express your answer as a common fraction.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "How many $3$-digit squares are palindromes?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Alexandra purchased 8 kilograms of apples and 2 pounds of cheese. Each kilogram of apples costs $3 and a pound of cheese costs $6. What is the total amount Alexandra spent?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "A rectangular garden is to be fenced with 60 meters of fencing. What is the maximum possible area of the garden in square meters?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Define a sequence of complex numbers by $z_1 = 0$ and\n\\[z_{n + 1} = z_n^2 + i\\]for all $n \\ge 1.$  In the complex plane, how far from the origin is $z_{111}$?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Compute $\\frac{x^3+1}{x+1}$ when $x=-2$.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Solve the inequality\n\\[\\frac{x^2 - 25}{x + 5} < 0.\\]\n\nAnother problem inspired by this one:\n\nFind all values of $x$ such that the expression\n\\[\\frac{x^2 + 2x - 3}{x^2 - 4x + 4}\\]\nis non-negative.\n\n(Note: I've changed the type of inequality, and the expression involves a quadratic in both the numerator and denominator, requiring a different approach to solve.)",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Problem:\nA group of friends want to go on a road trip together. They have a car that can carry a maximum of 5 people, including the driver. The group consists of 8 people, and they want to make sure that each person drives for an equal amount of time. If they plan to drive for a total of 12 hours, how many different combinations of drivers can they have?\n\n(Note: I've created a problem that requires a different approach, focusing on combinations and equality rather than average rate and distance.)",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "The function $f(x)=\\frac{x^3-2x^2+3x+5}{x^3-x^2-5x+3}$ has horizontal asymptote $y=a$. Find $a$.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "The quadratic $x^2+1300x+1300$ can be written in the form $(x+b)^2+c$, where $b$ and $c$ are constants. What is $\\frac{c}{b}$?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "A publishing company is producing a new book that requires a unique identifier for each page. The identifier consists of a letter (A-Z) followed by a two-digit number (00-99). The company wants to purchase a set of stampers that can be used to print these identifiers. Each set of stampers contains all 26 letters and all 10 digits (0-9). If the book has 500 pages, how many sets of stampers should the company buy to ensure that each page has a unique identifier?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "In triangle $DEF$, the angle bisector $EG$ divides side $DF$ into segments $DG$ and $GF$. If the lengths of sides $DE$, $EF$, and $DF$ are $12$, $15$, and $20$ inches, respectively, and the length of segment $DG$ is $2$ inches more than the length of segment $GF$, find the length of the shorter subsegment of side $DF$.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Ms. Rodriguez purchased a $230 laptop, a $67 printer, and a $12 pack of paper. She pays with a $350 check. How much will the cashier refund to her?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "The number of books on the shelves of a bookstore is shown in the bar chart below.\n\n\\begin{tabular}{|c|c|}\n\\hline\nShelf & Number of Books\\\\\n\\hline\n1 & 12\\\\\n2 & 15\\\\\n3 & 10\\\\\n4 & 18\\\\\n5 & 20\\\\\n6 & 15\\\\\n7 & 10\\\\\n8 & 18\\\\\n9 & 20\\\\\n10 & 15\\\\\n\\hline\n\\end{tabular}\n\nWhat is the median number of books on the shelves?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "If $(2x-5)(x+1)=18$, find the product of the possible values of $x$.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "The projection of $\\begin{pmatrix} -2 \\\\ c \\end{pmatrix}$ onto $\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$ is\n\\[\\frac{7}{10} \\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}.\\]Find $c.$",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Given a positive integer $n$, find the sum of the squares of all positive integer divisors of $n$ if the sum of the divisors of $n$ is 78 and the sum of the divisors of $n$ excluding 1 and $n$ is 54.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "A box contains 5 red balls and 7 blue balls. If two balls are drawn randomly from the box without replacement, what is the probability that the second ball drawn is blue, given that the first ball drawn is red?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Ana has 3 boxes of 240 documents each that she needs to recycle. Her paper cutter can only cut 8 sheets at a time. How many times will she cut 8 units of paper until all of the documents are cut?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "A bag contains 8 red marbles and an unknown number of blue marbles. A player randomly selects a marble from the bag. If a red marble is selected, the player wins 3 dollars, but if a blue marble is selected, the player loses 3 dollars. If the expected amount won for playing the game is 1 dollar, then how many blue marbles are in the bag?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "What is the value of $-a-b^3+ab$ if $a=-3$ and $b=2$?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Let $p(x)$ be a monic quadratic polynomial with integer coefficients. Suppose there exist integers $a$ and $b$ such that the roots of $p(x) = a$ satisfy a monic quadratic polynomial $q(x)$ with integer coefficients, and the roots of $p(x) = b$ satisfy a monic quadratic polynomial $r(x)$ with integer coefficients. Given that $a \\neq b$ and the leading coefficient of $p(x)$ is 5, determine $a - b$.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Find the least positive difference between a term of the arithmetic sequence\n$$2, 9, 16, 23, 30, \\ldots$$\nand a term of the sequence defined by\n$a_n = n^2,$ for $n = 1, 2, 3, \\ldots$",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Mr. Sanchez's students were asked to add two positive integers. Juan subtracted by mistake and got 2. Maria mistakenly multiplied and got 120. What was the correct answer?",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Kenneth has 30 cats in his animal shelter. If 70% of them are female, and 2/3 of the female cats give birth to 8 kittens each, calculate the total number of kittens that Kenneth remains with after donating 75 kittens to a local animal rescue organization.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  },
+  {
+    "source": "openmath-instruct-2",
+    "model": "nemotron",
+    "prompt": "Let $a_n = \\sum_{k = 0}^n \\frac{1}{\\binom{n}{k}} \\quad \\text{and} \\quad b_n = \\sum_{k = 0}^n \\frac{k}{\\binom{n}{k}}$ for a positive integer $n.$\n\nFind the limit of $\\frac{a_n}{b_n}$ as $n$ tends to infinity.",
+    "response": "",
+    "reasoning": "",
+    "metadata": {}
+  }
+]
