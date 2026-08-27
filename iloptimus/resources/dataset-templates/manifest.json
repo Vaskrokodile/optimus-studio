@@ -1,0 +1,36 @@
+{
+  "description": "Template exemplars for dataset mode. Each row shows what a high-quality training row looks like.",
+  "format": {
+    "input": "str - the task/question",
+    "thinking_trace": "str - reasoning process",
+    "answer": "str - final answer",
+    "source": "str - dataset origin",
+    "domain": "str - math/coding/reasoning"
+  },
+  "sources": {
+    "openthoughts": {
+      "dataset": "open-thoughts/OpenThoughts-114k",
+      "rows": 8,
+      "domain": "coding",
+      "description": "Coding problems with deep reasoning traces"
+    },
+    "limo": {
+      "dataset": "GAIR/LIMO",
+      "rows": 8,
+      "domain": "reasoning",
+      "description": "Math reasoning with detailed solutions"
+    },
+    "qwen3": {
+      "dataset": "WithinUsAI/Qwen3.7_Max_Thinking_dataset_5K",
+      "rows": 8,
+      "domain": "math",
+      "description": "Math problems with thinking traces"
+    },
+    "kimi_k3": {
+      "dataset": "greghavens/kimi-k3-coding-and-debugging-traces",
+      "rows": 8,
+      "domain": "coding",
+      "description": "Coding and debugging traces from Kimi K3"
+    }
+  }
+}

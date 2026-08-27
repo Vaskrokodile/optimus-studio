@@ -11,6 +11,16 @@ from .pipeline import (
     run_pipeline_subprocess,
 )
 from .tasksets import TasksetInfo, get_all_tasksets, get_taskset
+from .dataset_mode import (
+    DatasetModeSpec,
+    DatasetModeResult,
+    enter_dataset_mode,
+    build_failure_driven_spec,
+    build_curriculum_spec,
+    list_dataset_sessions,
+    get_dataset_session,
+    load_dataset_rows,
+)
 
 __all__ = [
     "detect_hardware", "HardwareInfo",
@@ -18,4 +28,7 @@ __all__ = [
     "get_all_tasksets", "get_taskset", "TasksetInfo",
     "RunConfig", "RunState", "create_run", "get_run", "get_all_runs",
     "run_pipeline", "run_pipeline_subprocess", "_stream_events",
+    "DatasetModeSpec", "DatasetModeResult", "enter_dataset_mode",
+    "build_failure_driven_spec", "build_curriculum_spec",
+    "list_dataset_sessions", "get_dataset_session", "load_dataset_rows",
 ]
