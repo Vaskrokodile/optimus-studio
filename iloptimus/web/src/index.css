@@ -315,7 +315,55 @@
 .product-page{max-width:1320px;margin:0 auto;padding:38px 34px 80px;color:rgb(var(--text-primary))}
 
 /* RSI Loops */
-.loops-page{max-width:1100px}
+.loops-page{position:relative;overflow-x:clip}
+.loops-hero{position:relative;z-index:1;border-bottom-color:rgba(var(--border-base),.06)}
+.loops-hero h1{background:linear-gradient(120deg,rgb(var(--text-primary)) 30%,rgba(var(--accent),.95));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* animated space background (satellite filming Earth) */
+.loop-space{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.loop-space::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(1.5px 1.5px at 12% 22%, rgba(255,255,255,.9), transparent 60%),
+  radial-gradient(1px 1px at 32% 8%, rgba(255,255,255,.7), transparent),
+  radial-gradient(1.5px at 78% 18%, rgba(255,255,255,.8), transparent),
+  radial-gradient(1px at 55% 12%, rgba(255,255,255,.6), transparent),
+  radial-gradient(1.5px at 78% 12%, rgba(255,255,255,.75), transparent),
+  radial-gradient(1px at 40% 6%, rgba(255,255,255,.5), transparent),
+  radial-gradient(1.5px at 88% 15%, rgba(255,255,255,.65), transparent),
+  radial-gradient(1px at 68% 12%, rgba(255,255,255,.45), transparent),
+  radial-gradient(1.5px at 88% 12%, rgba(255,255,255,.65), transparent);
+  opacity:.8}
+.loop-space-stars{position:absolute;inset:0}
+.loop-star{position:absolute;border-radius:50%;background:#fff;opacity:.7;animation:loop-twinkle 3s ease-in-out infinite}
+@keyframes loop-twinkle{0%,100%{opacity:.25}50%{opacity:1}}
+.loop-planet{position:absolute;right:-140px;bottom:-240px;width:560px;height:560px;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 32% 28%, #2b6cb8 0%, #1a4e94 34%, #0c2c5e 62%, #060f22 100%);box-shadow:0 -18px 90px rgba(80,150,255,.28), inset -30px -40px 120px rgba(0,0,0,.65);transform:rotate(-8deg)}
+.loop-planet-surface{position:absolute;inset:-20%;background:
+  radial-gradient(ellipse 26% 12% at 30% 30%, rgba(120,220,170,.5), transparent 70%),
+  radial-gradient(ellipse 34% 10% at 62% 44%, rgba(120,200,140,.4), transparent 70%),
+  radial-gradient(ellipse 20% 10% at 20% 62%, rgba(110,190,150,.35), transparent),
+  radial-gradient(ellipse 40% 16% at 55% 66%, rgba(255,255,255,.16), transparent 70%),
+  radial-gradient(ellipse 30% 14% at 75% 22%, rgba(255,255,255,.14), transparent 70%);
+  animation:loop-planet-spin 90s linear infinite}
+@keyframes loop-planet-spin{from{transform:translateX(-6%)}50%{transform:translateX(6%)}100%{transform:translateX(-6%)}}
+.loop-planet-glow{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 30% 25%, rgba(160,210,255,.32), transparent 46%);mix-blend-mode:screen}
+.loop-orbit{position:absolute;right:-140px;bottom:-240px;width:560px;height:560px;animation:loop-orbit-spin 26s linear infinite}
+@keyframes loop-orbit-spin{to{transform:rotate(360deg)}}
+.loop-satellite{position:absolute;top:-13px;left:50%;margin-left:-13px;color:#dfe6ff;filter:drop-shadow(0 0 8px rgba(160,190,255,.8))}
+.loop-satellite-beam{position:absolute;top:100%;left:50%;width:2px;height:120px;margin-left:-1px;background:linear-gradient(to bottom, rgba(140,180,255,.5), transparent);transform-origin:top center;animation:loop-beam-sweep 5s ease-in-out infinite}
+@keyframes loop-beam-sweep{0%,100%{transform:rotate(-15deg)}50%{transform:rotate(15deg)}}
+.loop-shooting-star{position:absolute;top:14%;left:-8%;width:140px;height:1.5px;background:linear-gradient(90deg, transparent, rgba(255,255,255,.9));border-radius:99px;opacity:0;animation:loop-shoot 9s ease-in infinite;animation-delay:3s}
+@keyframes loop-shoot{0%{transform:translate(0,0) rotate(18deg);opacity:0}4%{opacity:.9}12%{transform:translate(46vw,22vh) rotate(18deg);opacity:0}100%{transform:translate(46vw,22vh) rotate(18deg);opacity:0}}
+
+.loops-page .loop-template-grid,.loops-page .loop-grid,.loops-page .loop-config,.loops-page .loop-card,.loops-page .loop-filter-row{position:relative;z-index:1}
+.loops-page .loop-template,.loops-page .loop-config,.loops-page .loop-card{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:rgba(var(--bg-elevated),.86)}
+.loops-page .loop-config{box-shadow:0 18px 50px rgba(var(--glass-shadow),.12)}
+
+/* kind filter chips — roomy and readable */
+.loop-filter-row{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 6px;position:relative;z-index:1}
+.loop-filter-row button{height:38px;padding:0 18px;display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(var(--border-base),.13);border-radius:99px;background:rgba(var(--bg-elevated),.85);backdrop-filter:blur(8px);color:rgb(var(--text-secondary));font-size:12px;font-weight:650;cursor:pointer;transition:.18s ease}
+.loop-filter-row button svg{width:14px;height:14px}
+.loop-filter-row button:hover{border-color:rgba(var(--accent),.4);color:rgb(var(--text-primary))}
+.loop-filter-row button.selected{border-color:rgb(var(--accent));background:rgba(var(--accent),.12);color:rgb(var(--accent));box-shadow:0 4px 16px rgba(var(--accent),.18)}
+
 .loops-section-title{margin:34px 0 14px;font-size:19px;letter-spacing:-.03em;font-weight:670;color:rgb(var(--text-primary))}
 .loop-kind-chip{display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border-radius:99px;background:rgba(var(--accent),.1);color:rgb(var(--accent));font-size:8px;font-weight:750;text-transform:uppercase;letter-spacing:.07em}
 .loop-kind-chip svg{width:11px;height:11px}

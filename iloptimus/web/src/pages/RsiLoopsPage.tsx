@@ -24,6 +24,43 @@ const KIND_ICONS: Record<string, typeof Code2> = {
   agentic: TerminalSquare,
 };
 
+function SpaceBackground() {
+  const stars = useMemo(
+    () => Array.from({ length: 90 }, (_, i) => ({
+      left: `${(i * 37.7) % 100}%`,
+      top: `${(i * 53.3) % 100}%`,
+      size: 1 + ((i * 13) % 3),
+      delay: `${(i % 40) * 0.13}s`,
+      duration: `${2.4 + (i % 5) * 0.7}s`,
+    })),
+    [],
+  );
+  return (
+    <div className="loop-space" aria-hidden="true">
+      <div className="loop-space-stars">
+        {stars.map((star, i) => (
+          <i key={i} className="loop-star" style={{ left: `${star.left}%`, top: `${star.top}%`, width: star.size, height: star.size, animationDelay: star.delay, animationDuration: star.duration }} />
+        ))}
+      </div>
+      <div className="loop-planet">
+        <div className="loop-planet-surface" />
+        <div className="loop-planet-glow" />
+      </div>
+      <div className="loop-orbit">
+        <div className="loop-satellite">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="9" y="9" width="6" height="6" rx="1" fill="currentColor" stroke="none" />
+            <path d="M2 10h5v4H2zM17 10h5v4h-5zM7 12h5M17 12h-5" />
+            <path d="M12 15v3M10 20h4" />
+          </svg>
+          <span className="loop-satellite-beam" />
+        </div>
+      </div>
+      <div className="loop-shooting-star" />
+    </div>
+  );
+}
+
 function RunnabilityBar({ score, label }: { score: number; label: string }) {
   const pct = Math.round(Math.max(0, Math.min(1, score)) * 100);
   // green -> amber -> red gradient stop based on score
@@ -163,7 +200,8 @@ export default function RsiLoopsPage() {
 
   return (
     <section className="product-page loops-page">
-      <header className="product-hero">
+      <SpaceBackground />
+      <header className="product-hero loops-hero">
         <div>
           <span className="product-kicker"><Repeat /> Recursive self-improvement</span>
           <h1>RSI Loops</h1>
