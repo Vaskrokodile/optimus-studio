@@ -420,6 +420,46 @@ def grade_humaneval(response: str, task_idx: int) -> GradedResult:
     )
 
 
+_TOOL_DOMAINS = {
+    "tool-fs": "il_tool_fs_navigator_v1",
+    "tool-sql": "il_tool_sql_analyst_v1",
+    "tool-web": "il_tool_web_research_v1",
+    "tool-booking": "il_tool_booking_flow_v1",
+    "tool-pipeline": "il_tool_pipeline_v1",
+    "tool-recovery": "il_tool_error_recovery_v1",
+    "tool-distractor": "il_tool_distractor_v1",
+    "tool-parallel": "il_tool_parallel_v1",
+    "tool-interpreter": "il_tool_interpreter_v1",
+    "tool-devops": "il_tool_devops_triage_v1",
+    "tool-api": "il_tool_api_reliability_v1",
+}
+
+
+def grade_tool_calling(response: str, task_idx: int, domain: str) -> GradedResult:
+    """Grade a tool-calling task: replay <tool_call> calls through the simulator."""
+    pkg_id = _TOOL_DOMAINS[domain]
+    tasks_mod = _load_module(
+        f"{pkg_id}_tasks",
+        str(_taskset_path(pkg_id, "tasks.py")),
+    )
+    scoring_mod = _load_module(
+        f"{pkg_id}_scoring",
+        str(_taskset_path(pkg_id, "scoring.py")),
+    )
+
+    task = tasks_mod.TASKS[task_idx]
+    score, breakdown = scoring_mod.score(task, response)
+
+    return GradedResult(
+        score=score,
+        correctness=breakdown["correctness"],
+        reasoning_quality=breakdown["tool_selection"],
+        coverage=breakdown["efficiency"],
+        verification=1.0 if not breakdown["errors"] else 0.0,
+        info=breakdown,
+    )
+
+
 def grade_gsm8k(response: str, task_idx: int) -> GradedResult:
     """Grade a GSM8K math task response (no sandbox needed)."""
     tasks_mod = _load_module(
@@ -465,6 +505,16 @@ _GRADERS = {
     "gsm8k": grade_gsm8k,
 }
 
+_TOOL_INSTRUCTION = (
+    "You are a tool-calling agent. Make tool calls inside "
+    "<tool>{\"name\": \"tool_name\", \"args\": {...}}</tool> blocks, one block per "
+    "call, in execution order. Choose the RIGHT tools with the RIGHT arguments in "
+    "the RIGHT order — use as few calls as possible, never call distractor tools, "
+    "and respect policy preconditions (e.g. look up before you modify). Simulated "
+    "observations are deterministic; anticipate them. After your calls, give the "
+    "final answer inside <answer>...</answer>.\n\n"
+)
+
 _INSTRUCTIONS = {
     "coding": _CODING_INSTRUCTION,
     "reasoning": _REASONING_INSTRUCTION,
@@ -472,6 +522,7 @@ _INSTRUCTIONS = {
     "agentic-coding": _AGENTIC_CODING_INSTRUCTION,
     "humaneval": _HUMANEVAL_INSTRUCTION,
     "gsm8k": _GSM8K_INSTRUCTION,
+    **{domain: _TOOL_INSTRUCTION for domain in _TOOL_DOMAINS},
 }
 
 
@@ -512,6 +563,9 @@ def grade_response(domain: str, task_idx: int, response: str) -> GradedResult:
             verification=metrics["verification"],
         )
 
+    if domain.startswith("tool-"):
+        return grade_tool_calling(response, task_idx, domain)
+
     grader = _GRADERS.get(domain)
     if not grader:
         raise ValueError(f"Unknown domain: {domain}")
@@ -539,6 +593,15 @@ def build_prompt(domain: str, task_idx: int) -> str:
         )
 
     instruction = _INSTRUCTIONS.get(domain, "")
+
+    if domain.startswith("tool-"):
+        pkg_id = _TOOL_DOMAINS[domain]
+        tasks_mod = _load_module(
+            f"{pkg_id}_tasks",
+            str(_taskset_path(pkg_id, "tasks.py")),
+        )
+        task = tasks_mod.TASKS[task_idx]
+        return instruction + f"## Task: {task.name}\n\n{task.spec}"
 
     if domain == "coding":
         tasks_mod = _load_module(
@@ -609,6 +672,7 @@ def get_num_tasks(domain: str) -> int:
         "agentic-coding": ("il_agentic_coding_tasks", "il_agentic_coding_v1", "tasks.py"),
         "humaneval": ("humaneval_v1_tasks", "humaneval_v1", "tasks.py"),
         "gsm8k": ("gsm8k_v1_tasks", "gsm8k_v1", "tasks.py"),
+        **{domain: (f"{pkg}_tasks", pkg, "tasks.py") for domain, pkg in _TOOL_DOMAINS.items()},
     }
     mod_name, pkg_id, filename = pkg_map[domain]
     tasks_mod = _load_module(mod_name, str(_taskset_path(pkg_id, filename)))

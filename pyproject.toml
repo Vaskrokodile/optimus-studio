@@ -27,6 +27,7 @@ dependencies = [
     "numpy>=1.24.0",
     "mcp>=1.27,<2",
     "httpx>=0.27",
+    "gymnasium>=0.29.0",
 ]
 
 [project.optional-dependencies]
@@ -63,6 +64,18 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = [
     "iloptimus",
+    "il_toolcalling_core/il_toolcalling_core",
+    "il_tool_fs_navigator_v1",
+    "il_tool_sql_analyst_v1",
+    "il_tool_web_research_v1",
+    "il_tool_booking_flow_v1",
+    "il_tool_pipeline_v1",
+    "il_tool_error_recovery_v1",
+    "il_tool_distractor_v1",
+    "il_tool_parallel_v1",
+    "il_tool_interpreter_v1",
+    "il_tool_devops_triage_v1",
+    "il_tool_api_reliability_v1",
     "il_coding_v1/il_coding_v1",
     "il_reasoning_v1/il_reasoning_v1",
     "il_agentic_reasoning_v1/il_agentic_reasoning_v1",

@@ -1,0 +1,18 @@
+[project]
+name = "il-tool-pipeline-v1"
+version = "0.1.0"
+description = "IL tool-calling taskset: il_tool_pipeline_v1."
+tags = ["tools", "il", "tool-calling", "v1"]
+requires-python = ">=3.11"
+dependencies = ["verifiers>=0.2.0", "il-toolcalling-core"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["il_tool_pipeline_v1"]
+
+[tool.verifiers.eval]
+num_examples = 4
+rollouts_per_example = 4
