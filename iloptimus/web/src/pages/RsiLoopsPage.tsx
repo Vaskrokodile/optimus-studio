@@ -37,24 +37,12 @@ function SpaceBackground() {
   );
   return (
     <div className="loop-space" aria-hidden="true">
+      <video className="loop-space-video" src="/earth-orbit-compressed.mp4" autoPlay loop muted playsInline />
+      <div className="loop-space-tint" />
       <div className="loop-space-stars">
         {stars.map((star, i) => (
           <i key={i} className="loop-star" style={{ left: `${star.left}%`, top: `${star.top}%`, width: star.size, height: star.size, animationDelay: star.delay, animationDuration: star.duration }} />
         ))}
-      </div>
-      <div className="loop-planet">
-        <div className="loop-planet-surface" />
-        <div className="loop-planet-glow" />
-      </div>
-      <div className="loop-orbit">
-        <div className="loop-satellite">
-          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="9" y="9" width="6" height="6" rx="1" fill="currentColor" stroke="none" />
-            <path d="M2 10h5v4H2zM17 10h5v4h-5zM7 12h5M17 12h-5" />
-            <path d="M12 15v3M10 20h4" />
-          </svg>
-          <span className="loop-satellite-beam" />
-        </div>
       </div>
       <div className="loop-shooting-star" />
     </div>
