@@ -123,6 +123,34 @@ MODELS: list[ModelInfo] = [
         description="Ultra-light. Runs anywhere. Good for quick IL experiments.",
         tags=["lightweight", "recommended"],
     ),
+    # --- OmniCoder-9B (the AIME 2025 model) ---
+    ModelInfo(
+        id="omnicoder-9b",
+        name="OmniCoder-9B",
+        huggingface_id="Tesslate/OmniCoder-9B",
+        params_b=9.0,
+        fp16_gb=19.0, fp32_gb=36.0, int8_gb=10.0, int4_gb=6.0,
+        family="qwen3.5",
+        context_length=131072,
+        backends=["vllm"],
+        description="Tesslate/OmniCoder-9B — Qwen3.5-based model trained with rank-256 rsLoRA on DistillMax debugging + refactoring datasets. Achieved 19/30 on AIME 2025 (pass@5) with checkpoint-50 adapter. The primary model for continued RL training toward general intelligence.",
+        tags=["reasoning", "math", "aime", "large", "rl-target"],
+        adapter_repo=None,  # adapter is local at E:\omnicoder-rl-candidates\continuation-50-files\checkpoint-50
+    ),
+    # --- merged_boosted_v1_small_r1_a100r1 (the 19/30 AIME 2025 model) ---
+    ModelInfo(
+        id="merged-boosted-r1-a100r1",
+        name="merged_boosted_v1_small_r1_a100r1",
+        huggingface_id="Akahsizrr/merged_boosted_v1_small_r1_a100r1",
+        params_b=1.5,
+        fp16_gb=3.5, fp32_gb=6.5, int8_gb=2.0, int4_gb=1.2,
+        family="deepseek-r1-distill",
+        context_length=131072,
+        backends=["mlx", "vllm"],
+        description="DeepSeek-R1-Distill-Qwen-1.5B + Akahsizrr/boosted-v1-small (merged) + local RTX3060 round1 LoRA (merged) + A100 round1 LoRA rank-32 (merged). Achieved 19/30 (63.3%) on AIME 2025 — the best recorded score. Score progression: 5/30 baseline → 9/30 (local round1) → 15/30 (A100 pre-training) → 17/30 (A100 round1 post) → 19/30 (A100 round2 pre-training). The primary model for continued RL self-improvement.",
+        tags=["reasoning", "math", "aime", "recommended", "rl-target", "self-improved"],
+        adapter_repo=None,  # standalone merged checkpoint, no adapter needed
+    ),
     ModelInfo(
         id="qwen2.5-1.5b",
         name="Qwen2.5-1.5B",

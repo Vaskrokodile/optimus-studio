@@ -1,0 +1,19 @@
+{
+  "pod_id": "343957e52cae4179ba1d94602629dbf7",
+  "name": "optimus-rl-loop",
+  "gpu_type": "A100_40GB",
+  "cost_per_hr": 1.99,
+  "status": "ACTIVE",
+  "ssh_connection": "root@132.145.198.4 -p 1234",
+  "ip": "132.145.198.4",
+  "ssh_port": 1234,
+  "ssh_key": "optimus_pi_key (id 5c43d54b31074810af9fa287b25e2567, primary)",
+  "team_id": "cmpa5da2t001ybtcvsf5cd77u",
+  "team_name": "ZetaIntelligence",
+  "wallet_id": "cmpa5da2t0021btcvhqre3u9k",
+  "environment_type": "cuda_12_4_pytorch_2_5",
+  "provider": "lambdalabs",
+  "data_center": "us-east-1",
+  "created_at": "2026-08-27T12:59:49.303000",
+  "purpose": "Continue AIME 2025 RSI loop from round 2 (best=19/30 on merged_boosted_v1_small_r1_a100r1)"
+}

@@ -93,6 +93,18 @@ TASKSET_REGISTRY: list[dict] = [
         "tags": ["math", "gsm8k", "benchmark", "reasoning", "single-turn"],
         "eval_config": {"num_examples": 25, "rollouts_per_example": 4},
     },
+    {
+        "id": "aime-2025",
+        "name": "AIME 2025",
+        "package_name": "aime_2025",
+        "path": "aime_2025",
+        "domain": "aime",
+        "description": "30 AIME 2025 competition math problems from test-time-compute/aime_2025. Integer answers 0-999, deterministic verification via boxed answer extraction. The benchmark on which OmniCoder-9B + checkpoint-50 achieved 19/30 (pass@5). Used for continued RL training toward general intelligence.",
+        "num_tasks": 30,
+        "needs_sandbox": False,
+        "tags": ["math", "aime", "competition", "benchmark", "reasoning", "single-turn"],
+        "eval_config": {"num_examples": 30, "rollouts_per_example": 5},
+    },
 ]
 
 

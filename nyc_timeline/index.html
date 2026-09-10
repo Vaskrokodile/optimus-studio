@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>NYC three.js attempts — timeline</title>
+<style>
+  :root {
+    --bg:#0d1117; --panel:#161b22; --border:#30363d; --text:#e6edf3;
+    --muted:#8b949e; --accent:#58a6ff; --pass:#3fb950; --fail:#f85149;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;
+         background:var(--bg); color:var(--text); }
+  header { position:sticky; top:0; z-index:10; background:#0d1117ee;
+            backdrop-filter:blur(8px); border-bottom:1px solid var(--border);
+            padding:12px 20px; }
+  header h1 { margin:0 0 4px; font-size:18px; }
+  header .stats { color:var(--muted); font-size:12px; }
+  nav { margin-top:8px; display:flex; flex-wrap:wrap; gap:6px; }
+  nav a { color:var(--accent); text-decoration:none; padding:2px 8px;
+           border:1px solid var(--border); border-radius:6px; font-size:11px; }
+  nav a:hover { background:var(--panel); }
+  main { max-width:1600px; margin:0 auto; padding:20px; }
+  .attempt { background:var(--panel); border:1px solid var(--border);
+              border-radius:10px; padding:18px; margin-bottom:22px; }
+  .attempt-meta { display:flex; gap:14px; margin-bottom:14px; }
+  .num { font-size:22px; font-weight:700; color:var(--accent); min-width:42px; }
+  .meta-main h3 { margin:0 0 6px; font-family:ui-monospace,Consolas,monospace;
+                   font-size:13px; color:var(--muted); }
+  .kv { display:flex; flex-wrap:wrap; gap:6px 14px; font-size:12px; }
+  .kv b { color:var(--muted); font-weight:500; margin-right:3px; }
+  .acc { margin-top:6px; font-size:12px; }
+  .muted { color:var(--muted); }
+  .variants { display:grid; grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+               gap:14px; }
+  .variant { background:#0d1117; border:1px solid var(--border);
+              border-radius:8px; padding:10px; }
+  .variant-head { display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+                   margin-bottom:6px; }
+  .variant-head h4 { margin:0; font-size:13px; }
+  .score,.gates { font-family:ui-monospace,Consolas,monospace; font-size:12px;
+                   color:var(--text); }
+  .badge { font-size:10px; padding:1px 6px; border-radius:4px; font-weight:700; }
+  .badge.pass { background:#1b3a23; color:var(--pass); }
+  .badge.fail { background:#3a1b1b; color:var(--fail); }
+  .feat-row { margin-bottom:6px; }
+  .feat { font-family:ui-monospace,Consolas,monospace; font-size:10px;
+           background:#21262d; padding:1px 5px; border-radius:4px; margin-right:4px; }
+  .preview { position:relative; width:100%; padding-top:62%; border-radius:6px;
+              overflow:hidden; border:1px solid var(--border); background:#000; }
+  .preview iframe { position:absolute; inset:0; width:100%; height:100%;
+                     border:0; }
+  .shot-link { margin-top:6px; font-size:11px; }
+  .shot-link a { color:var(--accent); text-decoration:none; margin-right:8px; }
+  .events-wrap { margin-top:14px; }
+  .events-wrap summary { cursor:pointer; color:var(--muted); font-size:12px; }
+  .events { margin:8px 0 0; padding-left:18px; font-size:11px; }
+  .events li { margin-bottom:2px; }
+  .seq { color:var(--muted); font-family:ui-monospace,Consolas,monospace; }
+  .stage { color:var(--accent); font-family:ui-monospace,Consolas,monospace; }
+</style>
+</head>
+<body>
+<header>
+  <h1>NYC three.js attempts — timeline</h1>
+  <div class="stats">17 attempts · 2 completed ·
+    best score 1.000 (d7ac7e86f414)</div>
+  <nav><a href='#a1'>#1</a><a href='#a2'>#2</a><a href='#a3'>#3</a><a href='#a4'>#4</a><a href='#a5'>#5</a><a href='#a6'>#6</a><a href='#a7'>#7</a><a href='#a8'>#8</a><a href='#a9'>#9</a><a href='#a10'>#10</a><a href='#a11'>#11</a><a href='#a12'>#12</a><a href='#a13'>#13</a><a href='#a14'>#14</a><a href='#a15'>#15</a><a href='#a16'>#16</a><a href='#a17'>#17</a></nav>
+</header>
+<main>
+
+    <section class="attempt" id="a1">
+      <div class="attempt-meta">
+        <div class="num">#1</div>
+        <div class="meta-main">
+          <h3>4aa12634ba6d</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> failed</span>
+            <span><b>progress</b> 1.0</span>
+            <span><b>created</b> 2026-08-18 23:10:39</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 49h 53m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants"></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a2">
+      <div class="attempt-meta">
+        <div class="num">#2</div>
+        <div class="meta-main">
+          <h3>958d68f72deb</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> failed</span>
+            <span><b>progress</b> 1.0</span>
+            <span><b>created</b> 2026-08-18 23:28:36</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 49h 35m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants"></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a3">
+      <div class="attempt-meta">
+        <div class="num">#3</div>
+        <div class="meta-main">
+          <h3>b313f37e7365</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> failed</span>
+            <span><b>progress</b> 1.0</span>
+            <span><b>created</b> 2026-08-18 23:40:49</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 49h 23m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Baseline</h4>
+            <span class="score">score 0.690</span>
+            <span class="gates">gates 7/8</span>
+            <span class='badge fail'>FAIL</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/b313f37e7365/baseline/index.html" title="b313f37e7365 baseline"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/b313f37e7365/baseline/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/b313f37e7365/baseline/index.html" target="_blank">open artifact</a></div>
+        </div></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a4">
+      <div class="attempt-meta">
+        <div class="num">#4</div>
+        <div class="meta-main">
+          <h3>a172f1eb06e7</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> failed</span>
+            <span><b>progress</b> 1.0</span>
+            <span><b>created</b> 2026-08-19 00:16:56</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 48h 47m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Baseline</h4>
+            <span class="score">score 0.690</span>
+            <span class="gates">gates 7/8</span>
+            <span class='badge fail'>FAIL</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/a172f1eb06e7/baseline/index.html" title="a172f1eb06e7 baseline"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/a172f1eb06e7/baseline/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/a172f1eb06e7/baseline/index.html" target="_blank">open artifact</a></div>
+        </div></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a5">
+      <div class="attempt-meta">
+        <div class="num">#5</div>
+        <div class="meta-main">
+          <h3>904333024e20</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> interrupted</span>
+            <span><b>progress</b> 0.54</span>
+            <span><b>created</b> 2026-08-19 00:50:58</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 48h 12m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Baseline</h4>
+            <span class="score">score 0.690</span>
+            <span class="gates">gates 7/8</span>
+            <span class='badge fail'>FAIL</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/904333024e20/baseline/index.html" title="904333024e20 baseline"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/904333024e20/baseline/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/904333024e20/baseline/index.html" target="_blank">open artifact</a></div>
+        </div></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a6">
+      <div class="attempt-meta">
+        <div class="num">#6</div>
+        <div class="meta-main">
+          <h3>c41a0f8f72b5</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> failed</span>
+            <span><b>progress</b> 1.0</span>
+            <span><b>created</b> 2026-08-19 00:57:36</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 48h 6m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Baseline</h4>
+            <span class="score">score 0.690</span>
+            <span class="gates">gates 7/8</span>
+            <span class='badge fail'>FAIL</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/c41a0f8f72b5/baseline/index.html" title="c41a0f8f72b5 baseline"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/c41a0f8f72b5/baseline/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/c41a0f8f72b5/baseline/index.html" target="_blank">open artifact</a></div>
+        </div></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a7">
+      <div class="attempt-meta">
+        <div class="num">#7</div>
+        <div class="meta-main">
+          <h3>d7ac7e86f414</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> completed</span>
+            <span><b>stage</b> completed</span>
+            <span><b>progress</b> 1.0</span>
+            <span><b>created</b> 2026-08-20 18:17:03</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 6h 46m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          <div class='acc'>acceptance: accepted=True baseline=1.0 adapted=1.0 improvement=0.0 <span class='muted'>The framework-compiled local model design passed every objective runtime gate; training was unnecessary</span></div>
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Baseline</h4>
+            <span class="score">score 1.000</span>
+            <span class="gates">gates 7/7</span>
+            <span class='badge pass'>PASS</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/d7ac7e86f414/baseline/index.html" title="d7ac7e86f414 baseline"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/d7ac7e86f414/baseline/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/d7ac7e86f414/baseline/index.html" target="_blank">open artifact</a></div>
+        </div></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a8">
+      <div class="attempt-meta">
+        <div class="num">#8</div>
+        <div class="meta-main">
+          <h3>b2690a494812</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> failed</span>
+            <span><b>progress</b> 1.0</span>
+            <span><b>created</b> 2026-08-20 18:47:08</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 6h 16m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants"></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a9">
+      <div class="attempt-meta">
+        <div class="num">#9</div>
+        <div class="meta-main">
+          <h3>fde6549278ea</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> interrupted</span>
+            <span><b>progress</b> 0.08</span>
+            <span><b>created</b> 2026-08-20 18:47:10</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 6h 16m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants"></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a10">
+      <div class="attempt-meta">
+        <div class="num">#10</div>
+        <div class="meta-main">
+          <h3>8cda9f91cb8f</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> interrupted</span>
+            <span><b>progress</b> 0.54</span>
+            <span><b>created</b> 2026-08-20 19:26:11</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 5h 37m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Baseline</h4>
+            <span class="score">score 0.929</span>
+            <span class="gates">gates 6/7</span>
+            <span class='badge fail'>FAIL</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/8cda9f91cb8f/baseline/index.html" title="8cda9f91cb8f baseline"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/8cda9f91cb8f/baseline/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/8cda9f91cb8f/baseline/index.html" target="_blank">open artifact</a></div>
+        </div></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a11">
+      <div class="attempt-meta">
+        <div class="num">#11</div>
+        <div class="meta-main">
+          <h3>7444c00ca96d</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> interrupted</span>
+            <span><b>progress</b> 0.08</span>
+            <span><b>created</b> 2026-08-20 20:12:32</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 4h 51m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants"></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a12">
+      <div class="attempt-meta">
+        <div class="num">#12</div>
+        <div class="meta-main">
+          <h3>cb1a96d5675e</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> failed</span>
+            <span><b>progress</b> 1.0</span>
+            <span><b>created</b> 2026-08-20 20:39:53</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 4h 24m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Baseline</h4>
+            <span class="score">score 0.690</span>
+            <span class="gates">gates 6/8</span>
+            <span class='badge fail'>FAIL</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/cb1a96d5675e/baseline/index.html" title="cb1a96d5675e baseline"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/cb1a96d5675e/baseline/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/cb1a96d5675e/baseline/index.html" target="_blank">open artifact</a></div>
+        </div></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a13">
+      <div class="attempt-meta">
+        <div class="num">#13</div>
+        <div class="meta-main">
+          <h3>8d7113f805e1</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> failed</span>
+            <span><b>progress</b> 1.0</span>
+            <span><b>created</b> 2026-08-20 20:56:53</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 4h 7m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Baseline</h4>
+            <span class="score">score 0.690</span>
+            <span class="gates">gates 6/8</span>
+            <span class='badge fail'>FAIL</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/8d7113f805e1/baseline/index.html" title="8d7113f805e1 baseline"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/8d7113f805e1/baseline/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/8d7113f805e1/baseline/index.html" target="_blank">open artifact</a></div>
+        </div></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a14">
+      <div class="attempt-meta">
+        <div class="num">#14</div>
+        <div class="meta-main">
+          <h3>51a51f103f05</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> failed</span>
+            <span><b>progress</b> 1.0</span>
+            <span><b>created</b> 2026-08-20 21:10:01</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 3h 53m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Baseline</h4>
+            <span class="score">score 0.690</span>
+            <span class="gates">gates 6/8</span>
+            <span class='badge fail'>FAIL</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/51a51f103f05/baseline/index.html" title="51a51f103f05 baseline"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/51a51f103f05/baseline/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/51a51f103f05/baseline/index.html" target="_blank">open artifact</a></div>
+        </div></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a15">
+      <div class="attempt-meta">
+        <div class="num">#15</div>
+        <div class="meta-main">
+          <h3>d4245af996a2</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> interrupted</span>
+            <span><b>progress</b> 0.54</span>
+            <span><b>created</b> 2026-08-20 21:26:08</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 3h 37m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Baseline</h4>
+            <span class="score">score 0.690</span>
+            <span class="gates">gates 6/8</span>
+            <span class='badge fail'>FAIL</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/d4245af996a2/baseline/index.html" title="d4245af996a2 baseline"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/d4245af996a2/baseline/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/d4245af996a2/baseline/index.html" target="_blank">open artifact</a></div>
+        </div></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a16">
+      <div class="attempt-meta">
+        <div class="num">#16</div>
+        <div class="meta-main">
+          <h3>141812488a7e</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> failed</span>
+            <span><b>stage</b> interrupted</span>
+            <span><b>progress</b> 0.54</span>
+            <span><b>created</b> 2026-08-20 22:02:36</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 3h 1m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Baseline</h4>
+            <span class="score">score 0.690</span>
+            <span class="gates">gates 6/8</span>
+            <span class='badge fail'>FAIL</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/141812488a7e/baseline/index.html" title="141812488a7e baseline"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/141812488a7e/baseline/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/141812488a7e/baseline/index.html" target="_blank">open artifact</a></div>
+        </div></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+    <section class="attempt" id="a17">
+      <div class="attempt-meta">
+        <div class="num">#17</div>
+        <div class="meta-main">
+          <h3>22b2d5886e7a</h3>
+          <div class="kv">
+            <span><b>model</b> boosted-v1-small</span>
+            <span><b>status</b> completed</span>
+            <span><b>stage</b> completed</span>
+            <span><b>progress</b> 1.0</span>
+            <span><b>created</b> 2026-08-20 22:43:45</span>
+            <span><b>updated</b> 2026-08-21 01:03:57</span>
+            <span><b>duration</b> 2h 20m</span>
+            <span><b>events</b> 0</span>
+          </div>
+          <div class='acc'>acceptance: accepted=False baseline=0.69 adapted=0.69 improvement=0.0 <span class='muted'>Adapter rejected: it did not pass all gates with a sufficient measured improvement</span></div>
+        </div>
+      </div>
+      <div class="variants">
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Baseline</h4>
+            <span class="score">score 0.690</span>
+            <span class="gates">gates 6/8</span>
+            <span class='badge fail'>FAIL</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/22b2d5886e7a/baseline/index.html" title="22b2d5886e7a baseline"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/22b2d5886e7a/baseline/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/22b2d5886e7a/baseline/index.html" target="_blank">open artifact</a></div>
+        </div>
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Adapted</h4>
+            <span class="score">score 0.690</span>
+            <span class="gates">gates 6/8</span>
+            <span class='badge fail'>FAIL</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/22b2d5886e7a/adapted/index.html" title="22b2d5886e7a adapted"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/22b2d5886e7a/adapted/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/22b2d5886e7a/adapted/index.html" target="_blank">open artifact</a></div>
+        </div>
+        <div class="variant">
+          <div class="variant-head">
+            <h4>Framework</h4>
+            <span class="score">score 0.929</span>
+            <span class="gates">gates 6/7</span>
+            <span class='badge fail'>FAIL</span>
+          </div>
+          <div class="feat-row"><span class='feat'>three.js:1.0</span> <span class='feat'>city:1.0</span> <span class='feat'>responsive:1.0</span></div>
+          <div class="preview">
+            <iframe loading="lazy" src="artifacts/22b2d5886e7a/framework/index.html" title="22b2d5886e7a framework"></iframe>
+          </div>
+          <div class="shot-link"><a href="artifacts/22b2d5886e7a/framework/runtime.png" target="_blank">runtime screenshot</a> · <a href="artifacts/22b2d5886e7a/framework/index.html" target="_blank">open artifact</a></div>
+        </div></div>
+      <details class="events-wrap"><summary>events (0)</summary><p class='muted'>no events</p></details>
+    </section>
+</main>
+</body>
+</html>
