@@ -380,6 +380,87 @@ export function streamRsiEvents(panelId: string, after: number, onEvent: (event:
   return source;
 }
 
+// ---------------------------------------------------------------------------
+// RSI Loops — configurable self-improvement loops
+// ---------------------------------------------------------------------------
+
+export interface RsiLoopTemplate {
+  id: string;
+  kind: string;
+  name: string;
+  objective: string;
+  default_minutes: number;
+  default_iterations: number;
+  needs_sandbox: boolean;
+}
+
+export interface RsiLoop {
+  id: string;
+  name: string;
+  kind: string;
+  model_id: string;
+  objective: string;
+  time_budget_minutes: number;
+  max_iterations: number;
+  status: "draft" | "running" | "completed" | "stopped" | "failed";
+  panel_id: string;
+  iterations_done: number;
+  best_score: number;
+  score_history: number[];
+  created_at: number;
+  updated_at: number;
+  last_error: string;
+  panel_status?: string;
+  panel_events?: RsiEvent[];
+}
+
+export interface RunnabilityScore {
+  score: number;
+  label: string;
+  factors: {
+    model_fit: number;
+    time_feasibility: number;
+    memory_headroom: number;
+    estimated_tps: number;
+    feasible_iterations: number;
+    needs_sandbox: boolean;
+  };
+}
+
+export async function getRsiLoops(): Promise<{ loops: RsiLoop[]; templates: RsiLoopTemplate[]; kinds: string[] }> {
+  return fetchJSON("/api/rsi/loops");
+}
+
+export async function getRsiLoop(loopId: string): Promise<RsiLoop> {
+  return fetchJSON(`/api/rsi/loops/${loopId}`);
+}
+
+export async function createRsiLoop(loop: Partial<RsiLoop>): Promise<RsiLoop> {
+  const res = await fetch("/api/rsi/loops", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(loop),
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function stopRsiLoop(loopId: string): Promise<RsiLoop> {
+  const res = await fetch(`/api/rsi/loops/${loopId}`, { method: "DELETE" });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function getLoopRunnability(config: { model_id: string; time_budget_minutes: number; max_iterations: number; needs_sandbox: boolean; context_window?: number }): Promise<RunnabilityScore> {
+  const res = await fetch("/api/rsi/loops/runnability", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(config),
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
 export async function getLearningSession(sessionId: string): Promise<LearningSession> {
   return fetchJSON(`/api/learning/${sessionId}`);
 }

@@ -11,6 +11,7 @@ import {
   Settings,
   PanelLeftClose,
   PanelLeftOpen,
+  Repeat,
   Share2,
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
@@ -23,6 +24,7 @@ const navItems = [
   { to: "/research/sakura-island", label: "Research paper", icon: BookOpen },
   { to: "/research/optimus-map", label: "Optimus map", icon: Network },
   { to: "/harness-graph", label: "Harness graph", icon: Share2 },
+  { to: "/rsi-loops", label: "RSI Loops", icon: Repeat },
 ];
 
 const recentChats = [

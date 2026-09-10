@@ -107,6 +107,7 @@ from .core.pipeline import _run_in_executor
 from .core.preflight import evaluate_run_preflight
 from .core.run_manifest import build_run_manifest
 from .core.rsi_panels import RsiPanelManager
+from .core.rsi_loops import LOOP_KINDS, LOOP_TEMPLATES, RsiLoopStore, runnability
 from .core.scene_spec import (
     audit_scene_authorship,
     audit_scene_spec,
@@ -2627,6 +2628,90 @@ def create_app() -> FastAPI:
             return await rsi_panels.stop(panel_id)
         except ValueError as error:
             raise HTTPException(404, str(error)) from error
+
+    # ---- RSI Loops -------------------------------------------------------
+    rsi_loops = RsiLoopStore()
+
+    @app.get("/api/rsi/loops")
+    async def list_rsi_loops():
+        return {"loops": rsi_loops.list(), "templates": LOOP_TEMPLATES, "kinds": LOOP_KINDS}
+
+    @app.post("/api/rsi/loops/runnability")
+    async def rsi_loop_runnability(req: dict[str, Any]):
+        model = get_model(str(req.get("model_id") or ""))
+        if not model:
+            raise HTTPException(404, "Unknown model")
+        hw = _get_hardware()
+        compat = check_compatibility(model, hw)
+        estimate = estimate_context_performance(model, hw, int(req.get("context_window") or 4096))
+        return runnability(
+            compat.score,
+            compat.best_precision_gb,
+            hw.total_memory_gb,
+            True,
+            int(req.get("time_budget_minutes") or 30),
+            int(req.get("max_iterations") or 5),
+            bool(req.get("needs_sandbox")),
+            estimate.estimated_tps,
+        )
+
+    @app.post("/api/rsi/loops")
+    async def create_rsi_loop(req: dict[str, Any], request: Request):
+        model = _resolve_chat_model(str(req.get("model_id") or ""))
+        if not model:
+            raise HTTPException(404, "Model not found")
+        hw = _get_hardware()
+        precision = compatible_precision(model, hw)
+        if model_status(model.id, precision, hw.recommended_backend)["status"] != "downloaded":
+            raise HTTPException(409, "Download this model before launching an RSI loop")
+        loop = rsi_loops.create(req)
+        # Launch the loop on a dedicated persistent RSI panel worker.
+        loop_prompt = (
+            f"RSI LOOP: {loop.name} ({loop.kind})\n"
+            f"Objective: {loop.objective}\n"
+            f"Run for up to {loop.max_iterations} iterations within {loop.time_budget_minutes} minutes. "
+            "Each iteration: attempt the objective, verify the result, record what improved, and carry the lesson into the next iteration."
+        )
+        try:
+            workspace = app_home() / "workspaces" / f"loop-{loop.id}"
+            panel = await rsi_panels.launch(
+                model_id=model.id,
+                workspace=workspace,
+                base_url=str(request.base_url).rstrip("/"),
+                title=f"RSI Loop: {loop.name}",
+                initial_prompt=loop_prompt,
+            )
+            loop.panel_id = str(panel.get("id", ""))
+        except Exception as error:  # panel launch is best-effort; loop stays runnable
+            loop.last_error = str(error)
+        loop.status = "running"
+        return rsi_loops.save(loop).public()
+
+    @app.get("/api/rsi/loops/{loop_id}")
+    async def get_rsi_loop(loop_id: str):
+        loop = rsi_loops.get(loop_id)
+        if not loop:
+            raise HTTPException(404, "RSI loop not found")
+        data = loop.public()
+        if loop.panel_id:
+            panel = rsi_panels.get(loop.panel_id)
+            if panel:
+                data["panel_status"] = panel.status
+                data["panel_events"] = rsi_panels.events(loop.panel_id)
+        return data
+
+    @app.delete("/api/rsi/loops/{loop_id}")
+    async def stop_rsi_loop(loop_id: str):
+        loop = rsi_loops.get(loop_id)
+        if not loop:
+            raise HTTPException(404, "RSI loop not found")
+        if loop.panel_id and rsi_panels.get(loop.panel_id):
+            try:
+                await rsi_panels.stop(loop.panel_id)
+            except ValueError:
+                pass
+        loop.status = "stopped"
+        return rsi_loops.save(loop).public()
 
     @app.get("/api/models")
     async def models():
