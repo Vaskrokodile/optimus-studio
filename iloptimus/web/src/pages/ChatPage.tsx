@@ -197,6 +197,10 @@ export default function ChatPage() {
 
   return (
     <section className="chat-page">
+      <div className="chat-space" aria-hidden="true">
+        <video className="chat-space-video" src="/blackhole.mp4" autoPlay loop muted playsInline />
+        <div className="chat-space-tint" />
+      </div>
       <header className="chat-header">
         <div className="model-status"><span className="status-dot" /><select value={modelId} onChange={(event) => { const next = models.find((item) => item.id === event.target.value); setModelId(event.target.value); if (next) localStorage.setItem("iloptimus-chat-model", JSON.stringify({ id: next.id, name: next.name })); }} aria-label="Active model">{models.some((item) => item.local.status === "downloaded") ? models.filter((item) => item.local.status === "downloaded").map((item) => <option key={item.id} value={item.id}>{item.name}</option>) : <option value="">Download a model first</option>}</select><ChevronDown /></div>
         <button className="header-action" onClick={() => navigate("/models")}><SlidersHorizontal /> Model library</button>
