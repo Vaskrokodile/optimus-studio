@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { Bot, ChevronDown, FlaskConical, Layers3, MessageSquare, Plus, Workflow, X } from "lucide-react";
+import { Bot, ChevronDown, FlaskConical, Layers3, MessageSquare, Plus, SlidersHorizontal, Workflow, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { getRsiPanels, stopRsiPanel, type RsiPanel } from "../api/client";
+import { getModels, getRsiPanels, stopRsiPanel, type ModelInfo, type RsiPanel } from "../api/client";
 
 export const WORKSPACE_TABS_EVENT = "iloptimus:workspace-tabs";
+export const CHAT_MODEL_EVENT = "iloptimus:chat-model";
 
 export function refreshWorkspaceTabs() {
   window.dispatchEvent(new Event(WORKSPACE_TABS_EVENT));
@@ -12,6 +13,9 @@ export function refreshWorkspaceTabs() {
 export default function WorkspaceTabs() {
   const [panels, setPanels] = useState<RsiPanel[]>([]);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [models, setModels] = useState<ModelInfo[]>([]);
+  const savedModel = (() => { try { return JSON.parse(localStorage.getItem("iloptimus-chat-model") || "null"); } catch { return null; } })();
+  const [modelId, setModelId] = useState<string>(savedModel?.id || "");
   const location = useLocation();
   const navigate = useNavigate();
   const menuRef = useRef<HTMLDivElement>(null);
@@ -20,6 +24,11 @@ export default function WorkspaceTabs() {
 
   useEffect(() => {
     refresh();
+    getModels().then((items) => {
+      setModels(items);
+      const installed = items.filter((item) => item.local.status === "downloaded");
+      setModelId((current) => (installed.some((item) => item.id === current) ? current : installed[0]?.id || current));
+    }).catch(() => undefined);
     window.addEventListener(WORKSPACE_TABS_EVENT, refresh);
     return () => window.removeEventListener(WORKSPACE_TABS_EVENT, refresh);
   }, []);
@@ -66,7 +75,28 @@ export default function WorkspaceTabs() {
           </div>}
         </div>
       </div>
-      <div id="workspace-tabs-trailer" className="workspace-tabs-trailer" />
+      <div id="workspace-tabs-trailer" className="workspace-tabs-trailer">
+        <div className="model-status chat-model-band">
+          <span className="status-dot" />
+          <select
+            value={modelId}
+            onChange={(event) => {
+              const id = event.target.value;
+              setModelId(id);
+              const next = models.find((item) => item.id === id);
+              if (next) localStorage.setItem("iloptimus-chat-model", JSON.stringify({ id: next.id, name: next.name }));
+              window.dispatchEvent(new CustomEvent(CHAT_MODEL_EVENT, { detail: { id } }));
+            }}
+            aria-label="Active model"
+          >
+            {models.some((item) => item.local.status === "downloaded")
+              ? models.filter((item) => item.local.status === "downloaded").map((item) => <option key={item.id} value={item.id}>{item.name}</option>)
+              : <option value="">Download a model first</option>}
+          </select>
+          <ChevronDown />
+          <button className="header-action" onClick={() => navigate("/models")}><SlidersHorizontal /> Model library</button>
+        </div>
+      </div>
     </div>
   );
 }

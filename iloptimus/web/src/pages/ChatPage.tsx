@@ -1,10 +1,9 @@
 import { CSSProperties, FormEvent, KeyboardEvent, useEffect, useMemo, useRef, useState } from "react";
-import { createPortal } from "react-dom";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowUp, Bot, BrainCircuit, Check, ChevronDown, Copy, Database, ExternalLink, Globe2, Paperclip, RotateCcw, SlidersHorizontal, User } from "lucide-react";
+import { ArrowUp, Bot, BrainCircuit, Check, Copy, Database, ExternalLink, Globe2, Paperclip, RotateCcw, User } from "lucide-react";
 import { createEnvironmentFromChat, createRsiPanels, getContextEstimate, getLearningSession, getModels, sendChat, streamLearningEvents, type ContextEstimate, type LearningSession, type ModelInfo } from "../api/client";
-import { refreshWorkspaceTabs } from "../components/WorkspaceTabs";
+import { CHAT_MODEL_EVENT, refreshWorkspaceTabs } from "../components/WorkspaceTabs";
 
 type Message = { role: "user" | "assistant"; text: string; reasoning?: string; skills?: string[]; tools?: string[]; tps?: number; panelIds?: string[]; learningId?: string };
 
@@ -54,8 +53,6 @@ export default function ChatPage() {
   const learningStreams = useRef<Record<string, EventSource>>({});
   const completedLearning = useRef<Set<string>>(new Set());
   const navigate = useNavigate();
-  const [tabsTrailer, setTabsTrailer] = useState<HTMLElement | null>(null);
-  useEffect(() => { setTrailer(document.getElementById("workspace-tabs-trailer")); }, []);
   const model = models.find((item) => item.id === modelId)?.name || savedModel?.name || "Qwen2.5-1.5B";
   const modelInfo = models.find((item) => item.id === modelId);
   const commandQuery = input.startsWith("/") && !input.includes(" ") ? input.slice(1).toLowerCase() : null;
@@ -78,6 +75,15 @@ export default function ChatPage() {
     const installed = items.filter((item) => item.local.status === "downloaded");
     if (!installed.some((item) => item.id === modelId) && installed[0]) setModelId(installed[0].id);
   }).catch(() => setModels([])); }, []);
+
+  useEffect(() => {
+    const onModelChange = (event: Event) => {
+      const id = (event as CustomEvent<{ id: string }>).detail?.id;
+      if (id) setModelId(id);
+    };
+    window.addEventListener(CHAT_MODEL_EVENT, onModelChange);
+    return () => window.removeEventListener(CHAT_MODEL_EVENT, onModelChange);
+  }, []);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -204,16 +210,6 @@ export default function ChatPage() {
         <video className="chat-space-video" src="/blackhole.mp4" autoPlay loop muted playsInline />
         <div className="chat-space-tint" />
       </div>
-      {tabsTrailer && createPortal(
-        <div className="model-status chat-model-band">
-          <span className="status-dot" />
-          <select value={modelId} onChange={(event) => { const next = models.find((item) => item.id === event.target.value); setModelId(event.target.value); if (next) localStorage.setItem("iloptimus-chat-model", JSON.stringify({ id: next.id, name: next.name })); }} aria-label="Active model">{models.some((item) => item.local.status === "downloaded") ? models.filter((item) => item.local.status === "downloaded").map((item) => <option key={item.id} value={item.id}>{item.name}</option>) : <option value="">Download a model first</option>}</select>
-          <ChevronDown />
-          <button className="header-action" onClick={() => navigate("/models")}><SlidersHorizontal /> Model library</button>
-        </div>,
-        tabsTrailer,
-      )}
-
 
       <div className={`chat-thread ${messages.length === 0 ? "empty-thread" : ""}`}>
         {messages.length === 0 ? (
