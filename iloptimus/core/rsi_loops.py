@@ -21,7 +21,7 @@ from typing import Any
 
 from .storage import app_home, atomic_write_json
 
-LOOP_KINDS = ["coding", "reasoning", "math", "tool-calling", "agentic"]
+LOOP_KINDS = ["coding", "reasoning", "math", "tool-calling", "agentic", "adaptive", "adversarial"]
 
 LOOP_TEMPLATES: list[dict[str, Any]] = [
     {
@@ -114,6 +114,32 @@ LOOP_TEMPLATES: list[dict[str, Any]] = [
         "default_iterations": 4,
         "needs_sandbox": False,
     },
+    {
+        "id": "loop-adaptive-self-evolve",
+        "kind": "adaptive",
+        "name": "Adaptive self-evolving loop",
+        "objective": (
+            "Run the adaptive orchestrator: query the skill graph, sample the frontier, "
+            "generate an environment, collect rollouts, run counterfactuals and recombination, "
+            "analyze outcomes, and emit a training signal."
+        ),
+        "default_minutes": 60,
+        "default_iterations": 10,
+        "needs_sandbox": False,
+    },
+    {
+        "id": "loop-adversarial-env",
+        "kind": "adversarial",
+        "name": "Adversarial environment gym",
+        "objective": (
+            "Given a base tool-calling or state-machine task, run an adversarial search to "
+            "find a world-dynamics mutation the current model fails but the expert solves. "
+            "Train on the resulting curriculum."
+        ),
+        "default_minutes": 30,
+        "default_iterations": 6,
+        "needs_sandbox": False,
+    },
 ]
 
 
@@ -134,6 +160,13 @@ class RsiLoop:
     created_at: float = field(default_factory=time.time)
     updated_at: float = field(default_factory=time.time)
     last_error: str = ""
+    # Adaptive-loop focus fields (used by kind == "adaptive"). The current
+    # focus skill, how many rollouts have been collected on it, and the
+    # ordered history of prior focuses are managed by plan_next_composition().
+    current_focus: str = ""
+    rollouts_on_focus: int = 0
+    focus_history: list[str] = field(default_factory=list)
+    frontier_profile_id: str = ""  # usually == model_id
 
     def public(self) -> dict[str, Any]:
         return asdict(self)
@@ -230,4 +263,108 @@ def runnability(model_compat_score: float, model_mem_gb: float, available_gb: fl
     return {"score": round(score, 3), "label": label, "factors": factors}
 
 
-__all__ = ["RsiLoop", "RsiLoopStore", "LOOP_KINDS", "LOOP_TEMPLATES", "runnability"]
+# ---------------------------------------------------------------------------
+# Adaptive-loop helpers (frontier sampler + composition planning)
+# ---------------------------------------------------------------------------
+
+
+def next_task(loop: RsiLoop, profile=None) -> tuple[Any, dict[str, Any]]:
+    """Pick the next (domain, task_idx) for an adaptive loop.
+
+    Returns ``(profile, selection)`` where ``selection`` is a dict with
+    ``domain``, ``task_idx``, and ``taskset_id``. Loads the frontier profile
+    for the loop's model if one is not supplied.
+    """
+    from .frontier_sampler import FrontierSampler, load_frontier_profile
+
+    if profile is None:
+        profile = load_frontier_profile(loop.frontier_profile_id or loop.model_id)
+    sampler = FrontierSampler(profile)
+    key = sampler.sample()
+    return profile, {
+        "domain": key.domain,
+        "task_idx": key.task_idx,
+        "taskset_id": key.taskset_id,
+    }
+
+
+def plan_next_composition(loop: RsiLoop, profiler, k: int = 1):
+    """Select the next skill composition for an adaptive loop.
+
+    Updates ``loop.current_focus`` to the chosen composition's first skill,
+    appends the prior focus to ``loop.focus_history``, and resets
+    ``loop.rollouts_on_focus``. Returns the chosen ``SkillComposition`` or
+    ``None`` if the profiler has no suggestions yet.
+    """
+    profile = profiler.load(loop.model_id, getattr(loop, "model_fingerprint", "") if hasattr(loop, "model_fingerprint") else "")
+    comps = profiler.suggest_compositions(profile, k=k)
+    if not comps:
+        return None
+    chosen = comps[0]
+    if loop.current_focus:
+        loop.focus_history.append(loop.current_focus)
+    loop.current_focus = sorted(chosen.node_ids)[0]
+    loop.rollouts_on_focus = 0
+    return chosen
+
+
+def run_frontier_iteration(
+    loop: RsiLoop,
+    model_generate,
+    estimate_params_b: float = 7.0,
+) -> dict[str, Any]:
+    """Run one frontier-sampler iteration: sample a taskset arm, generate,
+    grade, observe, and update the loop's score history.
+
+    ``model_generate`` is a callable ``(prompt: str) -> tuple[str, int]``
+    returning ``(response, tokens)``.
+    """
+    from .frontier_sampler import FrontierSampler, RolloutKey
+    from .grader import build_prompt, grade_response
+    from .capability_metrics import tool_selection_entropy
+
+    profile, selection = next_task(loop)
+    domain = selection["domain"]
+    task_idx = selection["task_idx"]
+
+    prompt = build_prompt(domain, task_idx)
+    response, tokens = model_generate(prompt)
+    flops = tokens * 2 * estimate_params_b * 1e9
+
+    graded = grade_response(domain, task_idx, response)
+
+    tool_entropy = 0.0
+    if domain.startswith("tool-"):
+        try:
+            from il_toolcalling_core.engine import parse_tool_calls
+            tool_entropy = tool_selection_entropy(parse_tool_calls(response))
+        except Exception:
+            pass
+
+    key = RolloutKey(domain=domain, task_idx=task_idx, taskset_id=selection.get("taskset_id", ""))
+    FrontierSampler(profile).observe(
+        key,
+        {"score": graded.score, "correctness": graded.correctness},
+        tokens=tokens, flops=flops, tool_entropy=tool_entropy,
+    )
+
+    loop.iterations_done += 1
+    loop.score_history.append(graded.score)
+    loop.best_score = max(loop.best_score, graded.score)
+    loop.rollouts_on_focus = getattr(loop, "rollouts_on_focus", 0) + 1
+    return {
+        "selection": selection,
+        "graded": {
+            "score": graded.score,
+            "correctness": graded.correctness,
+            "reasoning_quality": graded.reasoning_quality,
+        },
+        "tokens": tokens,
+        "tool_entropy": tool_entropy,
+    }
+
+
+__all__ = [
+    "RsiLoop", "RsiLoopStore", "LOOP_KINDS", "LOOP_TEMPLATES", "runnability",
+    "next_task", "plan_next_composition", "run_frontier_iteration",
+]

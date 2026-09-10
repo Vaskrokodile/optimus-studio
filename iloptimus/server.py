@@ -2713,6 +2713,83 @@ def create_app() -> FastAPI:
         loop.status = "stopped"
         return rsi_loops.save(loop).public()
 
+    # ---- Adaptive orchestrator endpoints ----------------------------------
+    from .core.adaptive_orchestrator import (
+        AdaptiveConfig,
+        AdaptiveOrchestrator,
+        OrchestratorStore,
+    )
+    from .core.persistent_world import PersistentWorld
+
+    orchestrator_store = OrchestratorStore(root=app_home() / "orchestrator")
+
+    @app.get("/api/rsi/loops/{loop_id}/adaptive/state")
+    async def get_adaptive_state(loop_id: str):
+        loop = rsi_loops.get(loop_id)
+        if not loop or loop.kind != "adaptive":
+            raise HTTPException(404, "Adaptive loop not found")
+        return orchestrator_store.load(loop_id).public()
+
+    @app.post("/api/rsi/loops/{loop_id}/adaptive/step")
+    async def run_adaptive_step(loop_id: str, request: Request):
+        loop = rsi_loops.get(loop_id)
+        if not loop or loop.kind != "adaptive":
+            raise HTTPException(404, "Adaptive loop not found")
+        payload = await request.json() if request.headers.get("content-type", "").startswith("application/json") else {}
+        # The actual trainee generation is wired by the caller via the panel /
+        # inference path; this endpoint advances the orchestrator state using a
+        # provided generate callable or a no-op stub.
+        generate_fn = payload.get("generate_fn")  # not serializable; reserved
+        config = AdaptiveConfig(
+            loop_id=loop_id,
+            model_id=loop.model_id,
+            rollouts_per_task=int(payload.get("rollouts_per_task", 4)),
+            max_iterations=1,
+            world_task_prob=float(payload.get("world_task_prob", 0.25)),
+        )
+        # Build a stub model if no generate_fn is supplied (state-advance mode).
+        model = type("StubModel", (), {"generate": staticmethod(lambda p: "<answer></answer>")})()
+        orch = AdaptiveOrchestrator(config=config, model=model)
+        signal = orch.iteration()
+        return signal.public()
+
+    @app.get("/api/worlds")
+    async def list_worlds():
+        root = app_home() / "worlds"
+        if not root.exists():
+            return {"worlds": []}
+        return {"worlds": [p.name for p in root.iterdir() if p.is_dir()]}
+
+    @app.get("/api/worlds/{world_id}")
+    async def get_world(world_id: str):
+        world = PersistentWorld.load(world_id)
+        if not world:
+            raise HTTPException(404, "World not found")
+        return world.public()
+
+    @app.post("/api/worlds")
+    async def create_world(payload: dict[str, Any]):
+        world = PersistentWorld(payload.get("world_id"))
+        world.save()
+        return world.public()
+
+    @app.post("/api/worlds/{world_id}/derive_task")
+    async def derive_world_task(world_id: str, payload: dict[str, Any]):
+        world = PersistentWorld.load(world_id)
+        if not world:
+            raise HTTPException(404, "World not found")
+        focus = payload.get("focus_skill")
+        return world.derive_task(focus).public()
+
+    @app.post("/api/worlds/{world_id}/advance")
+    async def advance_world(world_id: str, payload: dict[str, Any]):
+        world = PersistentWorld.load(world_id)
+        if not world:
+            raise HTTPException(404, "World not found")
+        world.advance(payload.get("actions", []))
+        world.save()
+        return world.public()
+
     @app.get("/api/models")
     async def models():
         hw = _get_hardware()

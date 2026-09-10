@@ -34,9 +34,33 @@ def learning_dir() -> Path:
     return app_home() / "learning"
 
 
+def worlds_dir() -> Path:
+    """Directory holding Persistent World state (see persistent_world.py)."""
+    return app_home() / "worlds"
+
+
+def orchestrator_dir() -> Path:
+    """Directory holding AdaptiveOrchestrator state (see adaptive_orchestrator.py)."""
+    return app_home() / "orchestrator"
+
+
+def profiles_dir() -> Path:
+    """Directory holding per-model capability / frontier profiles."""
+    return app_home() / "profiles"
+
+
 def ensure_app_dirs() -> Path:
     root = app_home()
-    for path in (root, models_dir(), adapters_dir(), environments_dir(), runs_dir(), learning_dir()):
+    for path in (
+        root,
+        models_dir(),
+        adapters_dir(),
+        environments_dir(),
+        runs_dir(),
+        learning_dir(),
+        worlds_dir(),
+        orchestrator_dir(),
+    ):
         path.mkdir(parents=True, exist_ok=True)
     return root
 
