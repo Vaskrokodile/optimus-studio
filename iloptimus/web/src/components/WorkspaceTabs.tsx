@@ -66,6 +66,7 @@ export default function WorkspaceTabs() {
           </div>}
         </div>
       </div>
+      <div id="workspace-tabs-trailer" className="workspace-tabs-trailer" />
     </div>
   );
 }
