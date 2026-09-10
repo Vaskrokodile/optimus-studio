@@ -190,7 +190,7 @@ class RsiLoopStore:
                 record = RsiLoop(**json.loads(path.read_text(encoding="utf-8")))
             except Exception:
                 continue
-            self._store(record)
+            self._records_safe(record)
 
     def _records_safe(self, record: RsiLoop) -> None:
         if record.status == "running":
