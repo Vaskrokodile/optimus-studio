@@ -337,17 +337,33 @@
 @keyframes loop-twinkle{0%,100%{opacity:.25}50%{opacity:1}}
 /* animated space background (satellite filming Earth — Pexels video, free to use) */
 .loop-space{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.loop-space-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;filter:saturate(1.05) brightness(.92)}
+.loop-space-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62;filter:saturate(1.08) brightness(.8) contrast(1.05)}
 .loop-space-tint{position:absolute;inset:0;background:
-  radial-gradient(ellipse 70% 55% at 20% 0%, rgba(var(--accent),.14), transparent 65%),
-  linear-gradient(to bottom, rgba(var(--bg-base),.55), rgba(var(--bg-base),.82) 55%, rgba(var(--bg-base),.94))}
+  radial-gradient(ellipse 70% 55% at 20% 0%, rgba(var(--accent),.16), transparent 65%),
+  linear-gradient(to bottom, rgba(10,12,18,.62), rgba(var(--bg-base),.72) 55%, rgba(var(--bg-base),.96))}
 .dark .loop-space-tint{background:
-  radial-gradient(ellipse 70% 50% at 70% 0%, rgba(90,120,255,.14), transparent 65%),
-  linear-gradient(to bottom, rgba(16,17,20,.45), rgba(16,17,20,.9))}
+  radial-gradient(ellipse 70% 50% at 70% 0%, rgba(90,120,255,.18), transparent 65%),
+  linear-gradient(to bottom, rgba(10,11,15,.55), rgba(10,11,15,.92))}
 
 .loops-page .loop-template-grid,.loops-page .loop-grid,.loops-page .loop-config,.loops-page .loop-card,.loops-page .loop-filter-row{position:relative;z-index:1}
-.loops-page .loop-template,.loops-page .loop-config,.loops-page .loop-card{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:rgba(var(--bg-elevated),.86)}
-.loops-page .loop-config{box-shadow:0 18px 50px rgba(var(--glass-shadow),.12)}
+.loops-page .loop-template,.loops-page .loop-config,.loops-page .loop-card{backdrop-filter:blur(14px) saturate(1.1);-webkit-backdrop-filter:blur(14px);background:rgba(14,16,22,.72);border-color:rgba(255,255,255,.09)}
+.loops-page .loop-config{box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.loops-page .loop-card{background:rgba(15,17,23,.72);border-color:rgba(255,255,255,.08)}
+.loops-page .loop-template{background:rgba(15,17,23,.72)}
+.dark .loops-page .loop-template,.dark .loops-page .loop-config,.dark .loops-page .loop-card{background:rgba(15,17,23,.66)}
+.loops-page .loop-filter-row button{background:rgba(14,16,22,.72);border-color:rgba(255,255,255,.14);color:rgba(255,255,255,.85)}
+.loops-page .loop-filter-row button.selected{color:#fff;background:rgba(var(--accent),.28)}
+.loops-page .loop-config,.loops-page .loop-card,.loops-page .loop-template{color:rgba(255,255,255,.88);border-color:rgba(255,255,255,.12)}
+.loops-page .loop-template strong,.loops-page .loop-card h3{color:#fff}
+.loops-page .loop-config label{color:rgba(255,255,255,.6)}
+.loops-page .loop-config input,.loops-page .loop-config select,.loops-page .loop-config textarea{background:rgba(10,12,18,.6);border-color:rgba(255,255,255,.14);color:#fff}
+.loops-page .loops-section-title{color:#fff}
+.loops-page .loop-card p,.loops-page .loop-template small,.loops-page .loop-card-meta,.loops-page .loop-card-actions button,.loops-page .loop-factors span{color:rgba(255,255,255,.72)}
+.loops-page .loop-card-actions button{border-color:rgba(255,255,255,.14)}
+.loops-page .loop-card-actions button:hover{color:#fff;border-color:rgba(255,255,255,.4)}
+.loops-page .loop-error{background:rgba(239,68,68,.18);color:#ff9d9d}
+.loops-page .loop-runnability-track{background:rgba(255,255,255,.12)}
+.loops-page .loop-runnability-scale,.loops-page .loop-runnability-head{color:rgba(255,255,255,.6)}
 
 /* kind filter chips — roomy and readable */
 .loop-filter-row{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 6px;position:relative;z-index:1}

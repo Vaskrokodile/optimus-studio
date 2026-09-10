@@ -37,7 +37,7 @@ function SpaceBackground() {
   );
   return (
     <div className="loop-space" aria-hidden="true">
-      <video className="loop-space-video" src="/earth-orbit-compressed.mp4" autoPlay loop muted playsInline />
+      <video className="loop-space-video" src="/earth-orbit.mp4" autoPlay loop muted playsInline />
       <div className="loop-space-tint" />
       <div className="loop-space-stars">
         {stars.map((star, i) => (
