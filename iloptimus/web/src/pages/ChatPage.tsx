@@ -1,16 +1,17 @@
 import { CSSProperties, FormEvent, KeyboardEvent, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowUp, Bot, BrainCircuit, Check, Copy, Database, ExternalLink, Globe2, Paperclip, RotateCcw, User } from "lucide-react";
+import { ArrowUp, Bot, BrainCircuit, Check, Copy, Database, ExternalLink, Globe2, Plus, RotateCcw, User } from "lucide-react";
 import { createEnvironmentFromChat, createRsiPanels, getContextEstimate, getLearningSession, getModels, sendChat, streamLearningEvents, type ContextEstimate, type LearningSession, type ModelInfo } from "../api/client";
 import { CHAT_MODEL_EVENT, refreshWorkspaceTabs } from "../components/WorkspaceTabs";
 
 type Message = { role: "user" | "assistant"; text: string; reasoning?: string; skills?: string[]; tools?: string[]; tps?: number; panelIds?: string[]; learningId?: string };
 
 const starters = [
-  "Design an IL pipeline for mathematical reasoning",
-  "Which local model fits my hardware?",
-  "Explain the difference between IL and RL",
+  "Design an IL pipeline",
+  "Pick a model for my GPU",
+  "IL vs RL, explained",
+  "Launch 2 RSI panels",
 ];
 
 const previousChats: Record<string, Message[]> = {
@@ -27,7 +28,7 @@ const previousChats: Record<string, Message[]> = {
 const slashCommands = [
   { command: "/il", title: "Create an IL environment", description: "Describe a capability to teach through ideal demonstrations", kind: "prompt" },
   { command: "/rl", title: "Create an RL environment", description: "Describe a world, its goal, and the reward signal", kind: "prompt" },
-  { command: "/rsi", title: "Launch RSI agent panels", description: "Example: /rsi 3 — open three persistent coding agents", kind: "prompt" },
+  { command: "/rsi", title: "Launch RSI agent panels", description: "Example: /rsi 3 - open three persistent coding agents", kind: "prompt" },
   { command: "/learn", title: "Research and learn", description: "Verify a question, build grounded data, and adapt when appropriate", kind: "prompt" },
   { command: "/models", title: "Open Model Library", description: "Choose which local model to chat with", kind: "navigate", to: "/models" },
   { command: "/lab", title: "Open Optimus Lab", description: "Configure and launch a training run", kind: "navigate", to: "/studio" },
@@ -207,20 +208,21 @@ export default function ChatPage() {
   return (
     <section className="chat-page">
       <div className="chat-space" aria-hidden="true">
-        <video className="chat-space-video" src="/blackhole.mp4" autoPlay loop muted playsInline />
+        <div className="chat-horizon" />
         <div className="chat-space-tint" />
       </div>
 
       <div className={`chat-thread ${messages.length === 0 ? "empty-thread" : ""}`}>
         {messages.length === 0 ? (
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="welcome-state">
-            <div className="welcome-title-row">
-              <h1>What do you want<br />to do today?</h1>
-              <div className="mascot-stage" aria-hidden="true"><img src="/wolf-mascot-v2.png" alt="" /></div>
+            <div className="assistant-orb" aria-hidden="true">
+              <span className="orb-ring" />
+              <span className="orb-ring inner" />
+              <span className="orb-dot" />
             </div>
-            <p className="welcome-copy">Chat with local models, explore ideas, and turn the best conversations into trainable intuition.</p>
-            <div className="starter-grid">
-              {starters.map((starter) => <button key={starter} onClick={() => send(starter)}>{starter}<ArrowUp /></button>)}
+            <h1>Hi, I'm Optimus, your local AI assistant.<br />How can I help you?</h1>
+            <div className="starter-pills">
+              {starters.map((starter) => <button key={starter} onClick={() => send(starter)}>{starter}</button>)}
             </div>
           </motion.div>
         ) : (
@@ -239,16 +241,19 @@ export default function ChatPage() {
 
       <form className="composer" onSubmit={(event: FormEvent) => { event.preventDefault(); send(); }}>
         {commandPaletteOpen && <div className="command-palette" role="listbox" aria-label="Slash commands"><div className="command-palette-label">Commands</div>{visibleCommands.map((item,index)=><button type="button" key={item.command} className={index===commandIndex?"active":""} onMouseDown={(event)=>{event.preventDefault();runCommand(item);setCommandIndex(0)}}><code>{item.command}</code><span><strong>{item.title}</strong><small>{item.description}</small></span><em>↵</em></button>)}</div>}
-        <textarea value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={onKeyDown} placeholder="Message your model…" rows={1} aria-label="Message" />
         {contextOpen && <div className="context-popover" role="dialog" aria-label="Context window settings">
           <div className="tps-estimator"><span>TPS estimator</span><strong>{contextEstimate ? `~${contextEstimate.estimated_tps.toFixed(1)} tok/s` : "Calculating…"}</strong></div>
-          {contextEstimate && <p>{contextEstimate.low_tps.toFixed(1)}–{contextEstimate.high_tps.toFixed(1)} tok/s · {contextEstimate.basis}</p>}
+          {contextEstimate && <p>{contextEstimate.low_tps.toFixed(1)}-{contextEstimate.high_tps.toFixed(1)} tok/s · {contextEstimate.basis}</p>}
           <input type="range" min={2048} max={maxContext} step={1024} value={Math.min(contextWindow, maxContext)} style={{ "--slider-progress": `${Math.max(0, Math.min(100, ((contextWindow - 2048) / Math.max(1, maxContext - 2048)) * 100))}%` } as CSSProperties} onChange={(event) => { const value = Number(event.target.value); setContextWindow(value); localStorage.setItem("iloptimus-context-window", String(value)); }} aria-label="Context window size" />
           <div className="context-scale"><span>{usedContextTokens.toLocaleString()} used</span><strong>{contextWindow.toLocaleString()} tokens</strong><span>{maxContext.toLocaleString()} max</span></div>
           {contextEstimate && !contextEstimate.fits_in_memory && <small>This selection may use system memory and run much slower.</small>}
         </div>}
-        <div className="composer-tools"><button type="button" className="attach" aria-label="Attach file"><Paperclip /></button><button type="button" className={`context-meter ${usedContextTokens ? "active" : ""}`} style={{ "--context-angle": `${contextRatio ? Math.max(12, contextRatio * 360) : 0}deg` } as CSSProperties} onClick={() => setContextOpen((open) => !open)} aria-label={`Context window: ${usedContextTokens} of ${contextWindow} tokens`} aria-expanded={contextOpen}><span /></button><span>Context {Math.round(contextRatio * 100)}%</span><div className="command-hints"><button type="button" onClick={()=>setInput("/il ")}>/il</button><button type="button" onClick={()=>setInput("/rl ")}>/rl</button></div></div>
-        <button className="send-button" disabled={!input.trim() || thinking || !models.some((item) => item.id === modelId && item.local.status === "downloaded")} aria-label="Send message"><ArrowUp /></button>
+        <textarea value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={onKeyDown} placeholder="Ask Optimus anything…" rows={2} aria-label="Message" />
+        <div className="composer-row">
+          <button type="button" className="attach" aria-label="Attach file"><Plus /></button>
+          <div className="composer-tools"><div className="command-hints"><button type="button" onClick={()=>setInput("/il ")}>/il</button><button type="button" onClick={()=>setInput("/rl ")}>/rl</button></div><button type="button" className={`context-meter ${usedContextTokens ? "active" : ""}`} style={{ "--context-angle": `${contextRatio ? Math.max(12, contextRatio * 360) : 0}deg` } as CSSProperties} onClick={() => setContextOpen((open) => !open)} aria-label={`Context window: ${usedContextTokens} of ${contextWindow} tokens`} aria-expanded={contextOpen}><span /></button></div>
+          <button className="send-button" disabled={!input.trim() || thinking || !models.some((item) => item.id === modelId && item.local.status === "downloaded")} aria-label="Send message"><ArrowUp /></button>
+        </div>
       </form>
       <p className="chat-footnote">Local models can make mistakes. Verify important outputs.</p>
     </section>

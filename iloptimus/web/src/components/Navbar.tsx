@@ -6,6 +6,7 @@ import {
   FlaskConical,
   MessageSquarePlus,
   Network,
+  Search,
   Workflow,
   Layers3,
   Settings,
@@ -28,20 +29,23 @@ const navItems = [
 ];
 
 const recentChats = [
-  "Designing a reasoning reward",
-  "Compare Qwen and Llama",
-  "Agentic coding curriculum",
-  "Review last training run",
+  { title: "Designing a reasoning reward", date: "Today" },
+  { title: "Compare Qwen and Llama", date: "Yesterday" },
+  { title: "Agentic coding curriculum", date: "Sep 10" },
+  { title: "Review last training run", date: "Sep 8" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
   const newChat = () => {
     navigate(`/?new=${Date.now()}`);
     setOpen(false);
   };
+
+  const filteredChats = recentChats.filter((chat) => chat.title.toLowerCase().includes(query.trim().toLowerCase()));
 
   return (
     <>
@@ -51,9 +55,32 @@ export default function Navbar() {
       {open && <button className="sidebar-scrim" onClick={() => setOpen(false)} aria-label="Close menu" />}
       <aside className={`sidebar ${open ? "sidebar-open" : ""}`}>
         <div className="sidebar-top">
+          <div className="brand">
+            <span className="brand-mark"><i /></span>
+            <span><strong>Optimus Studio</strong><small>Local model lab</small></span>
+          </div>
           <button onClick={newChat} className="new-chat-btn">
             <MessageSquarePlus /> <span>New chat</span><kbd>⌘ K</kbd>
           </button>
+          <label className="chat-search">
+            <Search />
+            <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search chats…" aria-label="Search chats" />
+          </label>
+          <div>
+            <div className="recents-label">Recent chats</div>
+            <div className="recent-list">
+              {filteredChats.map((chat) => (
+                <NavLink key={chat.title} to={`/?chat=${recentChats.indexOf(chat)}`} onClick={() => setOpen(false)} className="recent-chat">
+                  <span>{chat.title}</span>
+                  <small>{chat.date}</small>
+                </NavLink>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="sidebar-lower">
+          <div className="recents-label">Menu</div>
           <nav className="main-nav" aria-label="Workspace">
             {navItems.map(({ to, label, icon: Icon }) => (
               <NavLink key={to} to={to} onClick={() => setOpen(false)} className={({ isActive }) => `side-link ${isActive ? "active" : ""}`}>
@@ -61,17 +88,6 @@ export default function Navbar() {
               </NavLink>
             ))}
           </nav>
-        </div>
-
-        <div className="sidebar-lower">
-          <div className="recents-label">Recent chats</div>
-          <div className="recent-list">
-            {recentChats.map((chat, index) => (
-              <NavLink key={chat} to={`/?chat=${index}`} onClick={() => setOpen(false)} className="recent-chat">
-                <span>{chat}</span>
-              </NavLink>
-            ))}
-          </div>
           <div className="account-row">
             <div className="avatar">IL</div>
             <div className="account-copy"><strong>Local workspace</strong><span>Optimus account</span></div>
